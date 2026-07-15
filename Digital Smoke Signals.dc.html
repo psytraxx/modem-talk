@@ -48,6 +48,16 @@
     section[data-label="A Map of the Airwaves"][data-deck-active] .lora-rect { animation: loraGrow .7s cubic-bezier(.2,.8,.2,1) .4s both; }
     section[data-label="A Map of the Airwaves"][data-deck-active] .lora-label { animation: loraLabelIn .3s ease 1.0s both; }
   }
+  @keyframes deckReveal { from { opacity:0; transform:translateY(26px); } to { opacity:1; transform:translateY(0); } }
+  @media (prefers-reduced-motion:no-preference) {
+    section[data-deck-active] > * { animation: deckReveal .65s cubic-bezier(.2,.8,.2,1) both; }
+    section[data-deck-active] > *:nth-child(2) { animation-delay:.1s; }
+    section[data-deck-active] > *:nth-child(3) { animation-delay:.2s; }
+    section[data-deck-active] > *:nth-child(4) { animation-delay:.3s; }
+    section[data-deck-active] > *:nth-child(5) { animation-delay:.4s; }
+    section[data-deck-active] > *:nth-child(6) { animation-delay:.5s; }
+    section[data-deck-active] > *:nth-child(7) { animation-delay:.6s; }
+  }
   @keyframes slideshowFade { 0%{opacity:1} 27%{opacity:1} 33%{opacity:0} 94%{opacity:0} 100%{opacity:1} }
   * { text-wrap: pretty; }
 </style>
@@ -87,7 +97,7 @@
   </div>
 </section>
 
-<section data-label="Hi, I'm Eric" data-screen-label="03 Bio" data-speaker-notes="Quick intro. Software engineer, lifelong tinkerer. Worked with Chris on the backstage and ticketing systems for Mo:Dem. I've loved psy and goa festivals for years — first with friends, now with my family. Dad who camps. AI got me tinkering with electronics again. I believe tech is best when it's simple, hidden, and serves people." style="box-sizing:border-box;padding:90px 110px 80px;background:#0E0A18;color:#ECE6F4;font-family:'Space Grotesk',sans-serif;display:flex;flex-direction:row;align-items:center;gap:80px;overflow:hidden;">
+<section data-label="Hi, I'm Eric" data-screen-label="03 Bio" data-speaker-notes="Quick intro. Software engineer, lifelong tinkerer. Worked with Chris on the backstage and ticketing systems for Mo:Dem. I've loved psy and goa festivals since the turn of the millennium — first with friends, now with my family. Dad who camps. AI got me tinkering with electronics again. I believe tech is best when it's simple, hidden, and serves people." style="box-sizing:border-box;padding:90px 110px 80px;background:#0E0A18;color:#ECE6F4;font-family:'Space Grotesk',sans-serif;display:flex;flex-direction:row;align-items:center;gap:80px;overflow:hidden;">
   <div style="flex:0 0 520px;height:680px;border:1px solid rgba(255,255,255,.1);border-radius:18px;overflow:hidden;position:relative;background:#150E26;">
     <div style="position:absolute;inset:0;animation:slideshowFade 15s linear infinite;animation-delay:-5s;z-index:1;">
       <x-import component-from-global-scope="image-slot" from="./image-slot.js" id="bio-slide-2" shape="rect" placeholder="Drop photo 2" hint-size="520px,680px" style="position:absolute;inset:0;"></x-import>
@@ -104,7 +114,7 @@
     <h2 style="font-family:'Chakra Petch',sans-serif;font-weight:600;font-size:88px;line-height:1.0;margin:0;">Hi, I'm Eric</h2>
     <p style="font-size:36px;line-height:1.45;color:#C9BEDA;margin:40px 0 0;max-width:1000px;">Software engineer &amp; lifelong tinkerer. I've been taking things apart and rebuilding them since I was a kid.</p>
     <ul style="list-style:none;padding:0;margin:44px 0 0;display:flex;flex-direction:column;gap:24px;max-width:1000px;">
-      <li style="display:flex;align-items:flex-start;gap:20px;font-size:32px;line-height:1.35;color:#ECE6F4;"><span style="flex:0 0 auto;margin-top:12px;width:11px;height:11px;border-radius:50%;background:#C96BFF;box-shadow:0 0 12px rgba(201,107,255,.7);"></span><span>Psy &amp; goa festivals for years — <span style="color:#C96BFF;">first with friends</span>…</span></li>
+      <li style="display:flex;align-items:flex-start;gap:20px;font-size:32px;line-height:1.35;color:#ECE6F4;"><span style="flex:0 0 auto;margin-top:12px;width:11px;height:11px;border-radius:50%;background:#C96BFF;box-shadow:0 0 12px rgba(201,107,255,.7);"></span><span>Psy &amp; goa festivals <span style="color:#C96BFF;">since the turn of the millennium</span> — first with friends…</span></li>
       <li style="display:flex;align-items:flex-start;gap:20px;font-size:32px;line-height:1.35;color:#ECE6F4;"><span style="flex:0 0 auto;margin-top:12px;width:11px;height:11px;border-radius:50%;background:#FF8A3D;box-shadow:0 0 12px rgba(255,138,61,.7);"></span><span>…now with my <span style="color:#FF8A3D;">family</span> — a dad who camps, sometimes far from the rest of the camp.</span></li>
       <li style="display:flex;align-items:flex-start;gap:20px;font-size:32px;line-height:1.35;color:#ECE6F4;"><span style="flex:0 0 auto;margin-top:12px;width:11px;height:11px;border-radius:50%;background:#4FD6FF;box-shadow:0 0 12px rgba(79,214,255,.7);"></span><span>Back to tinkering with electronics — using AI as my teacher.</span></li>
       <li style="display:flex;align-items:flex-start;gap:20px;font-size:32px;line-height:1.35;color:#ECE6F4;"><span style="flex:0 0 auto;margin-top:12px;width:11px;height:11px;border-radius:50%;background:#9DE84B;box-shadow:0 0 12px rgba(157,232,75,.7);"></span><span>Helped build cloud infrastructure systems for <span style="color: rgb(157, 232, 75);">Mo:Dem</span>.</span></li>
@@ -342,7 +352,7 @@
   </div>
 </section>
 
-<section data-label="A Map of the Airwaves" data-screen-label="10 Bands" data-speaker-notes="The airwaves are a shared spectrum, sliced into bands. Walkie-talkies and FM radio down low. Wi-Fi way up high carrying lots of data but only across a room. LoRa sits in a quiet low band on purpose: tiny data, but enormous range. Low and slow wins distance." style="box-sizing:border-box;padding:80px 110px 70px;background:#0E0A18;color:#ECE6F4;font-family:'Space Grotesk',sans-serif;display:flex;flex-direction:column;overflow:hidden;">
+<section data-label="A Map of the Airwaves" data-screen-label="10 Bands" data-speaker-notes="The airwaves are a shared spectrum, sliced into bands. Walkie-talkies and FM radio down low. Wi-Fi way up high carrying lots of data but only across a room. Our radios sit in a quiet low band on purpose: tiny data, but enormous range. Low and slow wins distance. Don't name LoRa yet — that reveal comes in two slides." style="box-sizing:border-box;padding:80px 110px 70px;background:#0E0A18;color:#ECE6F4;font-family:'Space Grotesk',sans-serif;display:flex;flex-direction:column;overflow:hidden;">
   <div style="font-family:'Space Mono',monospace;font-size:24px;letter-spacing:4px;color:#9DE84B;margin-bottom:20px;">// 10 · THE SPECTRUM</div>
   <h2 style="font-family:'Chakra Petch',sans-serif;font-weight:600;font-size:72px;line-height:1.0;margin:0;">A map of the airwaves</h2>
   <p style="font-size:32px;line-height:1.4;color:#9A8BB2;margin:26px 0 0;max-width:1300px;">Every kind of signal has its own place on the dial. Here's where they sit — and the quiet spot where <span style="color:#9DE84B;">our little radios</span> live.</p>
@@ -353,8 +363,8 @@
       <g class="band-am" style="transform:translate(-20px,0);">
         <rect x="60" y="120" width="200" height="240" rx="14" fill="#1A1230" stroke="#3A2D52" stroke-width="2"></rect>
         <path d="M 85 240 q 37 -60 75 0 t 75 0" fill="none" stroke="#6B5B86" stroke-width="4" stroke-dasharray="10 8" style="animation:dashmove 4s linear infinite;"></path>
-        <text x="160" y="310" text-anchor="middle" font-family="Chakra Petch, sans-serif" font-size="28" fill="#C9BEDA">Walkie-Talkie</text>
-        <text x="160" y="344" text-anchor="middle" font-family="Space Mono, monospace" font-size="24" fill="#6B5B86">~49 MHz</text>
+        <text x="160" y="310" text-anchor="middle" font-family="Chakra Petch, sans-serif" font-size="28" fill="#C9BEDA">Submarine</text>
+        <text x="160" y="344" text-anchor="middle" font-family="Space Mono, monospace" font-size="24" fill="#6B5B86">~20 kHz</text>
       </g>
       <!-- FM -->
       <g class="band-fm" style="transform:translate(-20px,0);">
@@ -371,8 +381,8 @@
         </rect>
         <path d="M 545 240 q 24 -56 48 0 t 48 0 t 48 0 t 48 0" fill="none" stroke="#9DE84B" stroke-width="5" stroke-dasharray="10 8" style="animation:dashmove 2.4s linear infinite;filter:drop-shadow(0 0 6px rgba(157,232,75,.7));"></path>
         <text class="lora-label" x="640" y="140" text-anchor="middle" font-family="Space Mono, monospace" font-size="26" fill="#9DE84B">★ we are here</text>
-        <text x="640" y="310" text-anchor="middle" font-family="Chakra Petch, sans-serif" font-size="32" fill="#9DE84B">LoRa</text>
-        <text x="640" y="348" text-anchor="middle" font-family="Space Mono, monospace" font-size="24" fill="#9DE84B">868 MHz</text>
+        <text x="640" y="310" text-anchor="middle" font-family="Chakra Petch, sans-serif" font-size="32" fill="#9DE84B">Our little radios</text>
+        <text x="640" y="348" text-anchor="middle" font-family="Space Mono, monospace" font-size="24" fill="#9DE84B">433/868 MHz</text>
       </g>
       <!-- Mobile -->
       <g class="band-mobile" style="transform:translate(20px,0);">
@@ -406,10 +416,10 @@
 <section data-label="How I Found LoRa" data-screen-label="11 IoT Story" data-speaker-notes="Personal story. I wasn't looking for a festival gadget. I was tinkering at home with tiny IoT microcontrollers — chips the size of a stamp — trying to get sensor readings from the garden to my desk. WiFi couldn't reach. Then I found this strange little radio that sent my temperature readings kilometres on a coin battery. And it hit me: if it can carry sensor data that far... it can carry my messages too." style="box-sizing:border-box;padding:90px 110px 80px;background:radial-gradient(130% 120% at 80% 75%, #1B1430 0%, #0E0A18 60%);color:#ECE6F4;font-family:'Space Grotesk',sans-serif;display:flex;flex-direction:column;justify-content:center;overflow:hidden;position:relative;">
   <div class="tune-static" aria-hidden="true" style="position:absolute;inset:0;z-index:5;pointer-events:none;background:repeating-linear-gradient(0deg, rgba(255,255,255,.35) 0px, rgba(255,255,255,.35) 1px, transparent 1px, transparent 3px), #0E0A18;mix-blend-mode:screen;"></div>
   <div class="tune-label" aria-hidden="true" style="position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);z-index:6;font-family:'Space Mono',monospace;font-size:32px;letter-spacing:6px;color:#9DE84B;text-shadow:0 0 16px rgba(157,232,75,.7);white-space:nowrap;pointer-events:none;opacity:0;">// TUNING IN...</div>
-  <div class="tune-content" style="opacity:0;">
+  <div class="tune-content" style="opacity:1;">
   <div style="font-family:'Space Mono',monospace;font-size:24px;letter-spacing:4px;color:#9DE84B;margin-bottom:28px;">// 11 · A HAPPY ACCIDENT</div>
   <h2 style="font-family:'Chakra Petch',sans-serif;font-weight:600;font-size:84px;line-height:1.02;margin:0;max-width:1500px;">I wasn't looking for this</h2>
-  <p style="font-size:38px;line-height:1.42;color:#C9BEDA;margin:40px 0 0;max-width:1320px;">I was playing with <span style="color:#ECE6F4;">tiny computer chips</span> — the size of a stamp — trying to send data from a sensor in the garden to my desk. Wi-Fi could not reach that far. (My partner would say I was avoiding actual garden work. She's not wrong.)</p>
+  <p style="font-size:38px;line-height:1.42;color:#C9BEDA;margin:40px 0 0;max-width:1320px;">I was playing with <span style="color:#ECE6F4;">tiny computer chips</span> — the size of a stamp — trying to send data from a sensor in the garden to my desk. Wi-Fi could not reach that far.</p>
   <div style="display:flex;align-items:center;gap:36px;margin-top:52px;max-width:1400px;">
     <div style="flex:1;background:#1A1230;border:1px solid rgba(255,255,255,.08);border-radius:16px;padding:34px 38px;">
       <div style="font-family:'Space Mono',monospace;font-size:24px;color:#4FD6FF;margin-bottom:14px;">THE EXPERIMENT</div>
@@ -424,7 +434,7 @@
   </div>
 </section>
 
-<section data-label="LoRa: Small Messages, Very Far" data-screen-label="12 LoRa" data-speaker-notes="That quiet band has a name: LoRa, Long Range. It sends a tiny trickle of data — just text — incredibly far on almost no power. A small battery lasts days; with low-power mode or a small solar panel, weeks. Text-only isn't a limitation, it's the whole point: small messages go the distance." style="box-sizing:border-box;padding:80px 110px 70px;background:#0E0A18;color:#ECE6F4;font-family:'Space Grotesk',sans-serif;display:flex;flex-direction:column;justify-content:center;overflow:hidden;">
+<section data-label="LoRa: Small Messages, Very Far" data-screen-label="12 LoRa" data-speaker-notes="That quiet band has a name: LoRa, Long Range. It sends a tiny trickle of data — just text — incredibly far on almost no power. A small battery lasts days; with low-power mode or a small solar panel, weeks. Text-only isn't a limitation, it's the whole point: small messages go the distance. One important note: which bands you're allowed to use, and how much power, is set by regulation and differs by country — always check your local rules before transmitting." style="box-sizing:border-box;padding:80px 110px 70px;background:#0E0A18;color:#ECE6F4;font-family:'Space Grotesk',sans-serif;display:flex;flex-direction:column;justify-content:center;overflow:hidden;">
   <div style="font-family:'Space Mono',monospace;font-size:24px;letter-spacing:4px;color:#9DE84B;margin-bottom:20px;">// 12 · THE SECRET INGREDIENT</div>
   <h2 style="font-family:'Chakra Petch',sans-serif;font-weight:600;font-size:72px;line-height:1.0;margin:0;">LoRa: small messages, very far</h2>
   <p style="font-size:36px;line-height:1.4;color:#C9BEDA;margin:30px 0 0;max-width:1320px;">That quiet spot has a name: <span style="color:#9DE84B;">Lo</span>ng <span style="color:#9DE84B;">Ra</span>nge radio. A tiny bit of data — just text — sent for kilometres on almost no power.</p>
@@ -444,13 +454,15 @@
     </div>
   </div>
   <div style="margin-top:40px;background:#150E26;border:1px solid rgba(255,255,255,.07);border-radius:14px;padding:30px 40px;font-size:32px;line-height:1.4;color:#ECE6F4;">No photos, no video, no endless scrolling. <span style="color:#9A8BB2;">One look tells you what you need — then the phone goes back in the pocket. You save time, and you stay at the festival.</span></div>
+  <div style="margin-top:20px;font-family:'Space Mono',monospace;font-size:20px;color:#7E7090;">Bands and max power are set by regulation and differ by country — check your local rules.</div>
 </section>
 
-<section data-label="331 Kilometres" data-screen-label="13 Fact" data-speaker-notes="Quick fact break. 331 kilometres is the world record for ONE hop — two radios talking directly, mountain to mountain, line of sight. It's not a mesh number, it's just how far one of these tiny radios can shout. A mesh is what happens when you chain a bunch of them together so you don't need line-of-sight to a mountaintop." style="box-sizing:border-box;padding:80px 110px;background:#9DE84B;color:#0E0A18;font-family:'Space Grotesk',sans-serif;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;overflow:hidden;position:relative;">
+<section data-label="254 Kilometres" data-screen-label="13 Fact" data-speaker-notes="Quick fact break. 254 kilometres is the current Meshtastic range record for ONE hop — two radios talking directly, no repeaters, mountain to mountain across the Canada/U.S. border. It's not a mesh number, it's just how far one of these tiny radios can shout. A mesh is what happens when you chain a bunch of them together so you don't need line-of-sight to a mountaintop." style="box-sizing:border-box;padding:80px 110px;background:#9DE84B;color:#0E0A18;font-family:'Space Grotesk',sans-serif;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;overflow:hidden;position:relative;">
   <div style="font-family:'Space Mono',monospace;font-size:26px;letter-spacing:6px;text-transform:uppercase;opacity:0.7;margin-bottom:28px;">// TRUE STORY</div>
-  <div style="font-family:'Chakra Petch',sans-serif;font-weight:700;font-size:260px;line-height:0.9;">331<span style="font-size:120px;">km</span></div>
-  <p style="font-size:42px;line-height:1.4;max-width:1300px;margin:36px 0 0;font-weight:500;">The world record for just <span style="text-decoration:underline;">one</span> of these radios shouting directly to another. Mountain to mountain, a clear view between them, one hop.</p>
+  <div style="font-family:'Chakra Petch',sans-serif;font-weight:700;font-size:260px;line-height:0.9;">254<span style="font-size:120px;">km</span></div>
+  <p style="font-size:42px;line-height:1.4;max-width:1300px;margin:36px 0 0;font-weight:500;">The current Meshtastic range record for just <span style="text-decoration:underline;">one</span> of these radios shouting directly to another. Mountain to mountain, a clear view between them, one hop.</p>
   <p style="font-family:'Space Mono',monospace;font-size:28px;margin:30px 0 0;opacity:0.75;">Now imagine chaining a bunch of them together. That's the mesh part.</p>
+  <p style="font-family:'Space Mono',monospace;font-size:20px;margin:24px 0 0;opacity:0.5;">Source: Meshtastic community range record, Canada/U.S. border.</p>
 </section>
 
 <section data-label="The Hardware" data-screen-label="14 Hardware" data-speaker-notes="The hardware is cheap and small. A board like the LilyGo T-Beam or Heltec V3 runs about 25 to 40 euros. Battery, antenna, your phone — that's it. Pass them around afterwards." style="box-sizing:border-box;padding:80px 110px 70px;background:#0E0A18;color:#ECE6F4;font-family:'Space Grotesk',sans-serif;display:flex;flex-direction:column;overflow:hidden;">
@@ -459,21 +471,21 @@
   <p style="font-size:34px;line-height:1.4;color:#C9BEDA;margin:26px 0 0;max-width:1300px;">This is all you need. Smaller than a pack of cards, cheaper than a round of festival beers.</p>
   <div style="display:flex;gap:28px;margin-top:44px;flex:1;">
     <div style="flex:1;display:flex;flex-direction:column;">
-      <div style="flex:1;background:repeating-linear-gradient(45deg,#1A1230,#1A1230 14px,#170F29 14px,#170F29 28px);border:1px solid rgba(255,255,255,.1);border-radius:16px;display:flex;align-items:center;justify-content:center;text-align:center;color:#9A8BB2;font-family:'Space Mono',monospace;font-size:24px;min-height:300px;">[ photo: T-Beam ]</div>
-      <div style="font-family:'Chakra Petch',sans-serif;font-size:38px;color:#9DE84B;margin-top:22px;">LilyGo T-Beam</div>
-      <div style="font-size:28px;color:#C9BEDA;margin-top:8px;line-height:1.35;">Has GPS and a battery holder. The festival favourite.</div>
+      <div style="height:300px;position:relative;border:1px solid rgba(255,255,255,.1);border-radius:16px;overflow:hidden;"><x-import component-from-global-scope="image-slot" from="./image-slot.js" id="hardware-tbeam" shape="rect" placeholder="Drop photo: module + antenna" hint-size="100%,100%" style="position:absolute;inset:0;"></x-import></div>
+      <div style="font-family:'Chakra Petch',sans-serif;font-size:38px;color:#9DE84B;margin-top:22px;">Module &amp; Antenna</div>
+      <div style="font-size:28px;color:#C9BEDA;margin-top:8px;line-height:1.35;">A small board with the radio chip, plus an antenna for range. Plenty of makers sell one.</div>
       <div style="font-family:'Space Mono',monospace;font-size:26px;color:#FF8A3D;margin-top:14px;">~ €35</div>
     </div>
     <div style="flex:1;display:flex;flex-direction:column;">
-      <div style="flex:1;background:repeating-linear-gradient(45deg,#1A1230,#1A1230 14px,#170F29 14px,#170F29 28px);border:1px solid rgba(255,255,255,.1);border-radius:16px;display:flex;align-items:center;justify-content:center;text-align:center;color:#9A8BB2;font-family:'Space Mono',monospace;font-size:24px;min-height:300px;">[ photo: Heltec V3 ]</div>
-      <div style="font-family:'Chakra Petch',sans-serif;font-size:38px;color:#4FD6FF;margin-top:22px;">Heltec V3</div>
-      <div style="font-size:28px;color:#C9BEDA;margin-top:8px;line-height:1.35;">Tiny, with a small screen. Fits in any pocket.</div>
-      <div style="font-family:'Space Mono',monospace;font-size:26px;color:#FF8A3D;margin-top:14px;">~ €25</div>
+      <div style="height:300px;position:relative;border:1px solid rgba(255,255,255,.1);border-radius:16px;overflow:hidden;"><x-import component-from-global-scope="image-slot" from="./image-slot.js" id="hardware-solar" shape="rect" placeholder="Drop photo: solar panel + MPPT" hint-size="100%,100%" style="position:absolute;inset:0;"></x-import></div>
+      <div style="font-family:'Chakra Petch',sans-serif;font-size:38px;color:#4FD6FF;margin-top:22px;">Solar Panel + MPPT</div>
+      <div style="font-size:28px;color:#C9BEDA;margin-top:8px;line-height:1.35;">A small panel with a charge controller keeps it running indefinitely, no plug needed.</div>
+      <div style="font-family:'Space Mono',monospace;font-size:26px;color:#FF8A3D;margin-top:14px;">~ €20</div>
     </div>
     <div style="flex:1;display:flex;flex-direction:column;">
-      <div style="flex:1;background:repeating-linear-gradient(45deg,#1A1230,#1A1230 14px,#170F29 14px,#170F29 28px);border:1px solid rgba(255,255,255,.1);border-radius:16px;display:flex;align-items:center;justify-content:center;text-align:center;color:#9A8BB2;font-family:'Space Mono',monospace;font-size:24px;min-height:300px;">[ photo: antenna +<br>battery ]</div>
-      <div style="font-family:'Chakra Petch',sans-serif;font-size:38px;color:#C96BFF;margin-top:22px;">Antenna &amp; Battery</div>
-      <div style="font-size:28px;color:#C9BEDA;margin-top:8px;line-height:1.35;">A better antenna means more range. Any USB power bank keeps it running.</div>
+      <div style="height:300px;position:relative;border:1px solid rgba(255,255,255,.1);border-radius:16px;overflow:hidden;"><x-import component-from-global-scope="image-slot" from="./image-slot.js" id="hardware-antenna" shape="rect" placeholder="Drop photo: battery + charger" hint-size="100%,100%" style="position:absolute;inset:0;"></x-import></div>
+      <div style="font-family:'Chakra Petch',sans-serif;font-size:38px;color:#C96BFF;margin-top:22px;">Battery &amp; Charger</div>
+      <div style="font-size:28px;color:#C9BEDA;margin-top:8px;line-height:1.35;">Any USB power bank/ 18650 battery and charger keeps it running for days.</div>
       <div style="font-family:'Space Mono',monospace;font-size:26px;color:#FF8A3D;margin-top:14px;">~ €10</div>
     </div>
   </div>
@@ -516,9 +528,25 @@
   </div>
 </section>
 
-<section data-label="When They Switch It Off" data-screen-label="17 Freedom" data-speaker-notes="This is bigger than finding friends. A network with an owner has an off switch. During the 2022 protests in Iran the authorities throttled and shut down the internet to stop people organising. A mesh you own has no centre to seize and no plug to pull. That's freedom of speech, built into the design." style="box-sizing:border-box;padding:80px 110px 70px;background:radial-gradient(130% 130% at 18% 30%, #2A1530 0%, #0E0A18 60%);color:#ECE6F4;font-family:'Space Grotesk',sans-serif;display:flex;flex-direction:row;gap:70px;align-items:center;overflow:hidden;">
+<section data-label="Live Demo" data-screen-label="17 Demo" data-speaker-notes="Demo time. I'll send a message across the room, show the node list and the map of who's online and how far. If the radio gods are unkind, these screenshots are my backup." style="box-sizing:border-box;padding:80px 110px 70px;background:radial-gradient(120% 120% at 50% 25%, #1B1430 0%, #0E0A18 60%);color:#ECE6F4;font-family:'Space Grotesk',sans-serif;display:flex;flex-direction:column;overflow:hidden;">
+  <div style="display:flex;align-items:center;gap:20px;margin-bottom:18px;">
+    <span style="width:16px;height:16px;border-radius:50%;background:#FF5A4A;box-shadow:0 0 16px rgba(255,90,74,.9);animation:blink 1.4s ease-in-out infinite;"></span>
+    <span style="font-family:'Space Mono',monospace;font-size:26px;letter-spacing:5px;color:#FF8A3D;">// 17 · LIVE</span>
+  </div>
+  <h2 style="font-family:'Chakra Petch',sans-serif;font-weight:600;font-size:84px;line-height:1.0;margin:0;">Live demo</h2>
+  <p style="font-size:34px;line-height:1.4;color:#C9BEDA;margin:24px 0 0;max-width:1200px;">Let's send a real message across this room — and watch the map light up.</p>
+  <div style="display:flex;gap:28px;margin-top:36px;flex:1;">
+    <div style="flex:1.4;background:repeating-linear-gradient(45deg,#1A1230,#1A1230 14px,#170F29 14px,#170F29 28px);border:1px solid rgba(255,255,255,.1);border-radius:16px;display:flex;align-items:center;justify-content:center;text-align:center;color:#9A8BB2;font-family:'Space Mono',monospace;font-size:26px;">[ live node map / range — screenshot backup ]</div>
+    <div style="flex:1;display:flex;flex-direction:column;gap:28px;">
+      <div style="flex:1;background:repeating-linear-gradient(45deg,#1A1230,#1A1230 14px,#170F29 14px,#170F29 28px);border:1px solid rgba(255,255,255,.1);border-radius:16px;display:flex;align-items:center;justify-content:center;text-align:center;color:#9A8BB2;font-family:'Space Mono',monospace;font-size:24px;padding:20px;">[ chat thread ]</div>
+      <div style="flex:1;background:repeating-linear-gradient(45deg,#1A1230,#1A1230 14px,#170F29 14px,#170F29 28px);border:1px solid rgba(255,255,255,.1);border-radius:16px;display:flex;align-items:center;justify-content:center;text-align:center;color:#9A8BB2;font-family:'Space Mono',monospace;font-size:24px;padding:20px;">[ node list · signal ]</div>
+    </div>
+  </div>
+</section>
+
+<section data-label="When They Switch It Off" data-screen-label="18 Freedom" data-speaker-notes="This is bigger than finding friends. A network with an owner has an off switch. During the 2022 protests in Iran the authorities throttled and shut down the internet to stop people organising. A mesh you own has no centre to seize and no plug to pull. That's freedom of speech, built into the design." style="box-sizing:border-box;padding:80px 110px 70px;background:radial-gradient(130% 130% at 18% 30%, #2A1530 0%, #0E0A18 60%);color:#ECE6F4;font-family:'Space Grotesk',sans-serif;display:flex;flex-direction:row;gap:70px;align-items:center;overflow:hidden;">
   <div style="flex:1;">
-    <div style="font-family:'Space Mono',monospace;font-size:24px;letter-spacing:4px;color:#FF8A3D;margin-bottom:20px;">// 17 · WHY IT REALLY MATTERS</div>
+    <div style="font-family:'Space Mono',monospace;font-size:24px;letter-spacing:4px;color:#FF8A3D;margin-bottom:20px;">// 18 · WHY IT REALLY MATTERS</div>
     <h2 style="font-family:'Chakra Petch',sans-serif;font-weight:600;font-size:76px;line-height:1.0;margin:0;">When they switch it off</h2>
     <p style="font-size:36px;line-height:1.42;color:#C9BEDA;margin:34px 0 0;max-width:880px;">A network with an owner has an <span style="color:#FF8A3D;">off switch</span>. Governments slow down or shut off the internet to silence people.</p>
     <div style="margin-top:34px;border-left:3px solid #FF8A3D;padding:6px 0 6px 28px;max-width:880px;">
@@ -534,38 +562,23 @@
   </div>
 </section>
 
-<section data-label="Live Demo" data-screen-label="18 Demo" data-speaker-notes="Demo time. I'll send a message across the room, show the node list and the map of who's online and how far. If the radio gods are unkind, these screenshots are my backup." style="box-sizing:border-box;padding:80px 110px 70px;background:radial-gradient(120% 120% at 50% 25%, #1B1430 0%, #0E0A18 60%);color:#ECE6F4;font-family:'Space Grotesk',sans-serif;display:flex;flex-direction:column;overflow:hidden;">
-  <div style="display:flex;align-items:center;gap:20px;margin-bottom:18px;">
-    <span style="width:16px;height:16px;border-radius:50%;background:#FF5A4A;box-shadow:0 0 16px rgba(255,90,74,.9);animation:blink 1.4s ease-in-out infinite;"></span>
-    <span style="font-family:'Space Mono',monospace;font-size:26px;letter-spacing:5px;color:#FF8A3D;">// 18 · LIVE</span>
-  </div>
-  <h2 style="font-family:'Chakra Petch',sans-serif;font-weight:600;font-size:84px;line-height:1.0;margin:0;">Live demo</h2>
-  <p style="font-size:34px;line-height:1.4;color:#C9BEDA;margin:24px 0 0;max-width:1200px;">Let's send a real message across this room — and watch the map light up.</p>
-  <div style="display:flex;gap:28px;margin-top:36px;flex:1;">
-    <div style="flex:1.4;background:repeating-linear-gradient(45deg,#1A1230,#1A1230 14px,#170F29 14px,#170F29 28px);border:1px solid rgba(255,255,255,.1);border-radius:16px;display:flex;align-items:center;justify-content:center;text-align:center;color:#9A8BB2;font-family:'Space Mono',monospace;font-size:26px;">[ live node map / range — screenshot backup ]</div>
-    <div style="flex:1;display:flex;flex-direction:column;gap:28px;">
-      <div style="flex:1;background:repeating-linear-gradient(45deg,#1A1230,#1A1230 14px,#170F29 14px,#170F29 28px);border:1px solid rgba(255,255,255,.1);border-radius:16px;display:flex;align-items:center;justify-content:center;text-align:center;color:#9A8BB2;font-family:'Space Mono',monospace;font-size:24px;padding:20px;">[ chat thread ]</div>
-      <div style="flex:1;background:repeating-linear-gradient(45deg,#1A1230,#1A1230 14px,#170F29 14px,#170F29 28px);border:1px solid rgba(255,255,255,.1);border-radius:16px;display:flex;align-items:center;justify-content:center;text-align:center;color:#9A8BB2;font-family:'Space Mono',monospace;font-size:24px;padding:20px;">[ node list · signal ]</div>
-    </div>
-  </div>
-</section>
 
-<section data-label="Which One Are You?" data-screen-label="19" data-speaker-notes="Three kinds of people come to this: the tribe who want to find each other, the parents who need to stay reachable, the minimalists who want low-tech that doesn't hook them. Whichever you are, let's go build one." style="box-sizing:border-box;padding:90px 110px 80px;background:#0E0A18;color:#ECE6F4;font-family:'Space Grotesk',sans-serif;display:flex;flex-direction:column;justify-content:center;overflow:hidden;">
-  <div style="font-family:'Space Mono',monospace;font-size:24px;letter-spacing:4px;color:#9DE84B;margin-bottom:24px;">// 19 · WHICH ONE ARE YOU?</div>
-  <h2 style="font-family:'Chakra Petch',sans-serif;font-weight:600;font-size:88px;line-height:1.0;margin:0;max-width:1500px;">Which one are <span style="color:#9DE84B;">you</span>?</h2>
-  <p style="font-size:38px;line-height:1.4;color:#C9BEDA;margin:36px 0 0;max-width:1300px;">Whoever you are, the same three steps get you there.</p>
+<section data-label="Which One Are You?" data-screen-label="19" data-speaker-notes="Three kinds of people come to this: the tribe who want to find each other, the parents who need to stay reachable, the preppers who want a network that works when everything else is down. Whichever you are, let's go build one." style="box-sizing:border-box;padding:90px 110px 80px;background:#9DE84B;color:#0E0A18;font-family:'Space Grotesk',sans-serif;display:flex;flex-direction:column;justify-content:center;overflow:hidden;">
+  <div style="font-family:'Space Mono',monospace;font-size:24px;letter-spacing:4px;color:#0E0A18;opacity:0.6;margin-bottom:24px;">// 19 · WHICH ONE ARE YOU?</div>
+  <h2 style="font-family:'Chakra Petch',sans-serif;font-weight:700;font-size:96px;line-height:1.0;margin:0;max-width:1500px;">Which one are you?</h2>
+  <p style="font-size:38px;line-height:1.4;margin:36px 0 0;max-width:1300px;font-weight:500;">Whoever you are, the same three steps get you there.</p>
   <div style="display:flex;gap:28px;margin-top:60px;">
-    <div style="flex:1;background:#1A1230;border:1px solid rgba(255,255,255,.08);border-radius:16px;padding:40px;border-top:3px solid #9DE84B;">
+    <div style="flex:1;background:#0E0A18;border-radius:16px;padding:40px;">
       <div style="font-family:'Chakra Petch',sans-serif;font-size:40px;color:#9DE84B;margin-bottom:18px;">The Tribe</div>
       <div style="font-size:30px;line-height:1.4;color:#C9BEDA;">Find your people across kilometres of forest and crowded dancefloors.</div>
     </div>
-    <div style="flex:1;background:#1A1230;border:1px solid rgba(255,255,255,.08);border-radius:16px;padding:40px;border-top:3px solid #FF8A3D;">
+    <div style="flex:1;background:#0E0A18;border-radius:16px;padding:40px;">
       <div style="font-family:'Chakra Petch',sans-serif;font-size:40px;color:#FF8A3D;margin-bottom:18px;">The Parents</div>
       <div style="font-size:30px;line-height:1.4;color:#C9BEDA;">Your camp can always reach you — no mobile signal needed.</div>
     </div>
-    <div style="flex:1;background:#1A1230;border:1px solid rgba(255,255,255,.08);border-radius:16px;padding:40px;border-top:3px solid #4FD6FF;">
-      <div style="font-family:'Chakra Petch',sans-serif;font-size:40px;color:#4FD6FF;margin-bottom:18px;">The Minimalists</div>
-      <div style="font-size:30px;line-height:1.4;color:#C9BEDA;">Simple text messages that do the job — and never pull you in.</div>
+    <div style="flex:1;background:#0E0A18;border-radius:16px;padding:40px;">
+      <div style="font-family:'Chakra Petch',sans-serif;font-size:40px;color:#4FD6FF;margin-bottom:18px;">The Preppers</div>
+      <div style="font-size:30px;line-height:1.4;color:#C9BEDA;">A network that still works when everything else goes down.</div>
     </div>
   </div>
 </section>
