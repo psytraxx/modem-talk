@@ -23,7 +23,8 @@ jobs:
       - name: Assemble site (presentation only, no speaker notes)
         run: |
           mkdir -p site
-          cp "Digital Smoke Signals.dc.html" .image-slots.state.json site/index.html
+          cp "Digital Smoke Signals.dc.html" site/index.html
+          cp .image-slots.state.json site/
           cp *.js site/
           cp -r uploads site/
 
