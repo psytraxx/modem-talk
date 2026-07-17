@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+  <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@600;700&family=Space+Grotesk:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <template id="__bundler_thumbnail" data-bg-color="#0E0A18">
+    <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg"><rect width="200" height="200" fill="#0E0A18"></rect><circle cx="100" cy="100" r="70" fill="none" stroke="#9DE84B" stroke-width="3" opacity="0.5"></circle><circle cx="100" cy="100" r="45" fill="none" stroke="#4FD6FF" stroke-width="3" opacity="0.5"></circle><circle cx="100" cy="100" r="8" fill="#9DE84B"></circle></svg>
+  </template>
+  <style>doc-page:not(:defined){visibility:hidden}</style>
+</helmet>
+<x-import component-from-global-scope="doc-page" from="./doc-page.js" size="a4" margin="0.7in" hint-size="100%,100%">
+  <div style="display:flex;align-items:baseline;justify-content:space-between;border-bottom:2px solid #111;padding-bottom:14px;margin-bottom:24px;">
+    <div>
+      <div style="font-family:'Chakra Petch',sans-serif;font-weight:700;font-size:26px;color:#111;line-height:1;">Digital Smoke Signals</div>
+      <div style="font-family:'Space Grotesk',sans-serif;font-size:13px;color:#3BA55C;font-weight:600;margin-top:4px;letter-spacing:.3px;">SPEAKER NOTES · 24 SLIDES</div>
+    </div>
+    <div style="font-family:'Space Mono',monospace;font-size:11px;color:#888;">~18–20 min + demo &amp; Q&amp;A</div>
+  </div>
+      <div style="break-inside:avoid;margin-bottom:26px;display:flex;gap:20px;align-items:flex-start;">
+        <div style="flex:0 0 60px;font-family:'Space Mono',monospace;font-weight:700;font-size:22px;color:#3BA55C;line-height:1.1;padding-top:2px;">01</div>
+        <div style="flex:1;">
+          <div style="font-family:'Space Grotesk',sans-serif;font-weight:600;font-size:16px;color:#111;margin-bottom:6px;letter-spacing:.2px;">Title</div>
+          <div style="font-family:'Space Grotesk',sans-serif;font-size:13.5px;line-height:1.5;color:#333;text-wrap:pretty;">Open warm, low-key. Set the frame: by the end of the talk you'll know how to build a pocket radio network that finds your friends here without any phone signal — and you can start one before you leave. The title is literal: smoke signals were the original off-grid, no-infrastructure mesh — line of sight, everyone can see them, no one owns them. We're just doing the digital version. Keep it playful, no jargon yet.</div>
+        </div>
+      </div>
+      <div style="break-inside:avoid;margin-bottom:26px;display:flex;gap:20px;align-items:flex-start;">
+        <div style="flex:0 0 60px;font-family:'Space Mono',monospace;font-weight:700;font-size:22px;color:#3BA55C;line-height:1.1;padding-top:2px;">02</div>
+        <div style="flex:1;">
+          <div style="font-family:'Space Grotesk',sans-serif;font-weight:600;font-size:16px;color:#111;margin-bottom:6px;letter-spacing:.2px;">Paradox — “Lost in the crowd”</div>
+          <div style="font-family:'Space Grotesk',sans-serif;font-size:13.5px;line-height:1.5;color:#333;text-wrap:pretty;">The hook. Everyone in the room has lived this: you're at the festival to unplug, and yet you're holding your phone over your head trying to get one bar to text 'where are you?'. Name the two failures separately — (1) coverage: thousands of people on one rural tower means no signal exactly when you need it; (2) attention: even when it works, opening the phone pulls you into notifications, and twenty minutes later you're scrolling instead of dancing. Tonight solves both. Pause here, let people nod.</div>
+        </div>
+      </div>
+      <div style="break-inside:avoid;margin-bottom:26px;display:flex;gap:20px;align-items:flex-start;">
+        <div style="flex:0 0 60px;font-family:'Space Mono',monospace;font-weight:700;font-size:22px;color:#3BA55C;line-height:1.1;padding-top:2px;">03</div>
+        <div style="flex:1;">
+          <div style="font-family:'Space Grotesk',sans-serif;font-weight:600;font-size:16px;color:#111;margin-bottom:6px;letter-spacing:.2px;">Bio</div>
+          <div style="font-family:'Space Grotesk',sans-serif;font-size:13.5px;line-height:1.5;color:#333;text-wrap:pretty;">Keep it short — credibility, not CV. Points to land: software engineer by trade, so I care how things actually work under the hood; built the backstage and ticketing systems for Mo:Dem with Chris, so I know this world from both sides. Been coming to psy and goa gatherings since around 2000 — the reference to 'my people' is real. Now I come as a dad who camps with kids, which is where the 'need to stay reachable' angle comes from personally. Recently AI tooling lowered the barrier and pulled me back into hardware tinkering. Thesis I'll return to at the end: the best tech is simple, hidden, and serves people rather than harvesting them.</div>
+        </div>
+      </div>
+      <div style="break-inside:avoid;margin-bottom:26px;display:flex;gap:20px;align-items:flex-start;">
+        <div style="flex:0 0 60px;font-family:'Space Mono',monospace;font-weight:700;font-size:22px;color:#3BA55C;line-height:1.1;padding-top:2px;">04</div>
+        <div style="flex:1;">
+          <div style="font-family:'Space Grotesk',sans-serif;font-weight:600;font-size:16px;color:#111;margin-bottom:6px;letter-spacing:.2px;">Why — “Your phone is hungry”</div>
+          <div style="font-family:'Space Grotesk',sans-serif;font-size:13.5px;line-height:1.5;color:#333;text-wrap:pretty;">Not anti-phone — anti-business-model. The phone is a miracle of engineering; the problem is the attention economy layered on top, engineered to maximise time-on-screen. Contrast that with the thing we'll build: single-purpose, no feed, no ads, no algorithm — it does one job and then gets out of your way. Flag the three audiences here so people self-identify early (this pays off on the 'Which one are you' slide near the end): the tribe finding each other, the parents staying reachable, the low-tech folks who want a tool that doesn't hook them.</div>
+        </div>
+      </div>
+      <div style="break-inside:avoid;margin-bottom:26px;display:flex;gap:20px;align-items:flex-start;">
+        <div style="flex:0 0 60px;font-family:'Space Mono',monospace;font-weight:700;font-size:22px;color:#3BA55C;line-height:1.1;padding-top:2px;">05</div>
+        <div style="flex:1;">
+          <div style="font-family:'Space Grotesk',sans-serif;font-weight:600;font-size:16px;color:#111;margin-bottom:6px;letter-spacing:.2px;">Roadmap — “A radio smaller than a candy bar. No towers. No bill.”</div>
+          <div style="font-family:'Space Grotesk',sans-serif;font-size:13.5px;line-height:1.5;color:#333;text-wrap:pretty;">Roadmap slide — tell them where we're going so the theory feels earned. The destination: a device smaller than a candy bar that pairs with your phone and passes messages straight to your friends' devices — no cell tower, no SIM, no monthly bill, works with zero bars. The slide now shows three short stops — how networks work, the secret radio, build yours tonight — and one expectation line: twenty minutes of how, then you hold one. Say the theory is short so nobody dreads it, and land the payoff: you'll leave knowing how to make one.</div>
+        </div>
+      </div>
+      <div style="break-inside:avoid;margin-bottom:26px;display:flex;gap:20px;align-items:flex-start;">
+        <div style="flex:0 0 60px;font-family:'Space Mono',monospace;font-weight:700;font-size:22px;color:#3BA55C;line-height:1.1;padding-top:2px;">06</div>
+        <div style="flex:1;">
+          <div style="font-family:'Space Grotesk',sans-serif;font-weight:600;font-size:16px;color:#111;margin-bottom:6px;letter-spacing:.2px;">Centralized — “One boss in the middle”</div>
+          <div style="font-family:'Space Grotesk',sans-serif;font-size:13.5px;line-height:1.5;color:#333;text-wrap:pretty;">Demystify the word 'network' before any diagram — it's just devices passing notes, like whispering down a row of friends. The only thing that matters is the shape: who hands to whom. Introduce shape one, centralized: every message routes through a middle that somebody owns and pays for — a cell tower, a server. Use the animation: point out the absurdity that a text to the person standing right next to you travels all the way up to the tower and back down. That round-trip is the weakness — if the middle is congested, down, or switched off, you're cut off even from someone an arm's length away. This sets up why mesh is better. Keep it concrete, avoid the word 'topology'.</div>
+        </div>
+      </div>
+      <div style="break-inside:avoid;margin-bottom:26px;display:flex;gap:20px;align-items:flex-start;">
+        <div style="flex:0 0 60px;font-family:'Space Mono',monospace;font-weight:700;font-size:22px;color:#3BA55C;line-height:1.1;padding-top:2px;">07</div>
+        <div style="flex:1;">
+          <div style="font-family:'Space Grotesk',sans-serif;font-weight:600;font-size:16px;color:#111;margin-bottom:6px;letter-spacing:.2px;">Mesh — “Mesh: no middle, no boss”</div>
+          <div style="font-family:'Space Grotesk',sans-serif;font-size:13.5px;line-height:1.5;color:#333;text-wrap:pretty;">The payoff shape. Mesh = no middle, every device relays for its neighbours, so the network belongs to everyone and no one. Walk the animation deliberately in two beats: beat one, message hops through the middle node and arrives — easy. Beat two, that middle node's battery dies (tap it), and instead of the network failing, the message just reroutes the long way — three hops, still delivered. That self-healing is the magic: no single point to seize, congest, or switch off. More devices actually makes a mesh stronger and wider, not slower — the opposite of one overloaded tower. This is the core idea of the whole talk; slow down here.</div>
+        </div>
+      </div>
+      <div style="break-inside:avoid;margin-bottom:26px;display:flex;gap:20px;align-items:flex-start;">
+        <div style="flex:0 0 60px;font-family:'Space Mono',monospace;font-weight:700;font-size:22px;color:#3BA55C;line-height:1.1;padding-top:2px;">08</div>
+        <div style="flex:1;">
+          <div style="font-family:'Space Grotesk',sans-serif;font-weight:600;font-size:16px;color:#111;margin-bottom:6px;letter-spacing:.2px;">Meshes — “Meshes are everywhere”</div>
+          <div style="font-family:'Space Grotesk',sans-serif;font-size:13.5px;line-height:1.5;color:#333;text-wrap:pretty;">Reassure the skeptics: mesh isn't fringe or experimental, it's the backbone of tech they already trust. The internet itself is a giant mesh of routers finding paths around outages — it was literally designed to survive parts going down. Even behind 5G and the mobile network, the core routers relay traffic hop to hop as a mesh; the centralized part is only the last leg to the tower. And a modern example people have at home: mesh Wi-Fi systems (Eero, Google Nest, Deco) where the nodes relay for each other to cover the whole house — same trick, smaller scale. Slide shows one line — you carry the examples verbally. Conclusion: the concept is battle-tested; the only open question for us is the physical link between our little boxes. Tee up the answer — radio — and move on.</div>
+        </div>
+      </div>
+      <div style="break-inside:avoid;margin-bottom:26px;display:flex;gap:20px;align-items:flex-start;">
+        <div style="flex:0 0 60px;font-family:'Space Mono',monospace;font-weight:700;font-size:22px;color:#3BA55C;line-height:1.1;padding-top:2px;">09</div>
+        <div style="flex:1;">
+          <div style="font-family:'Space Grotesk',sans-serif;font-weight:600;font-size:16px;color:#111;margin-bottom:6px;letter-spacing:.2px;">Radio — “Slow waves travel further”</div>
+          <div style="font-family:'Space Grotesk',sans-serif;font-size:13.5px;line-height:1.5;color:#333;text-wrap:pretty;">Bridge slide: if we've removed the towers and the wires, what physically carries the message between boxes? Radio waves — the same invisible medium as FM, Wi-Fi, and your car key fob. Keep the physics friendly: a radio wave is energy rippling through the air, and we encode information by wiggling it (that wiggle rate is 'frequency'). The one fact that matters for later: slower wiggles (lower frequency) travel further and bend around obstacles; faster wiggles carry more data but fade fast. That single trade-off — range versus data-rate — is what the next slide is built on, and it's the reason our radios can be so far-reaching. Don't over-explain; the animation carries it.</div>
+        </div>
+      </div>
+      <div style="break-inside:avoid;margin-bottom:26px;display:flex;gap:20px;align-items:flex-start;">
+        <div style="flex:0 0 60px;font-family:'Space Mono',monospace;font-weight:700;font-size:22px;color:#3BA55C;line-height:1.1;padding-top:2px;">10</div>
+        <div style="flex:1;">
+          <div style="font-family:'Space Grotesk',sans-serif;font-weight:600;font-size:16px;color:#111;margin-bottom:6px;letter-spacing:.2px;">Bands — “Low and slow wins distance”</div>
+          <div style="font-family:'Space Grotesk',sans-serif;font-size:13.5px;line-height:1.5;color:#333;text-wrap:pretty;">Give them a mental map of the spectrum without a physics lecture. It's a shared public resource, sliced into bands and regulated so signals don't stomp on each other. Anchor with familiar landmarks: FM radio and walkie-talkies live low and reach far; Wi-Fi lives high, moves tons of data, but barely leaves the room; your microwave oven is up there too. Our radios deliberately sit in a quiet, low, license-free band — trading data-rate for enormous range, exactly the trade-off from the last slide. The slogan: low and slow wins distance. IMPORTANT delivery note: do NOT say the word LoRa yet — the name is the reveal two slides from now, after the personal story lands harder.</div>
+        </div>
+      </div>
+      <div style="break-inside:avoid;margin-bottom:26px;display:flex;gap:20px;align-items:flex-start;">
+        <div style="flex:0 0 60px;font-family:'Space Mono',monospace;font-weight:700;font-size:22px;color:#3BA55C;line-height:1.1;padding-top:2px;">11</div>
+        <div style="flex:1;">
+          <div style="font-family:'Space Grotesk',sans-serif;font-weight:600;font-size:16px;color:#111;margin-bottom:6px;letter-spacing:.2px;">IoT Story — “I wasn't looking for this”</div>
+          <div style="font-family:'Space Grotesk',sans-serif;font-size:13.5px;line-height:1.5;color:#333;text-wrap:pretty;">Slow down and make it personal — this is the emotional turn of the deck, so drop the teacher voice and just tell it. I wasn't hunting for a festival gadget; I was at home trying to get temperature and soil readings from the far end of the garden back to my desk, and Wi-Fi simply wouldn't reach that far. Digging for a fix, I stumbled on this odd little radio that pushed my sensor readings kilometres on a coin-cell battery — almost no power. The lightbulb moment, and the pivot of the whole talk: if this thing can carry a temperature reading that far, it can carry a text message to my friends across a festival. Let the 'tuning in' animation breathe before the reveal.</div>
+        </div>
+      </div>
+      <div style="break-inside:avoid;margin-bottom:26px;display:flex;gap:20px;align-items:flex-start;">
+        <div style="flex:0 0 60px;font-family:'Space Mono',monospace;font-weight:700;font-size:22px;color:#3BA55C;line-height:1.1;padding-top:2px;">12</div>
+        <div style="flex:1;">
+          <div style="font-family:'Space Grotesk',sans-serif;font-weight:600;font-size:16px;color:#111;margin-bottom:6px;letter-spacing:.2px;">LoRa — “LoRa: small messages, very far”</div>
+          <div style="font-family:'Space Grotesk',sans-serif;font-size:13.5px;line-height:1.5;color:#333;text-wrap:pretty;">The reveal — say the name with a little weight: LoRa, short for Long Range. It's the technology behind that quiet low band. Frame the trade honestly and then flip it into a feature: it sends only a trickle of data — text, coordinates, tiny status pings — but it does it astonishingly far on almost nothing. Battery life story: a small cell lasts days; add low-power sleep or a matchbox solar panel and it runs for weeks or indefinitely. Reframe the limitation: text-only is the point, not a compromise — small messages are exactly what go the distance, and text is all you need to find your people. Then the responsible-adult note: the legal band and power limits are set by regulation and vary by country (EU uses 868 MHz, the US 915 MHz) — check your local rules before you transmit.</div>
+        </div>
+      </div>
+      <div style="break-inside:avoid;margin-bottom:26px;display:flex;gap:20px;align-items:flex-start;">
+        <div style="flex:0 0 60px;font-family:'Space Mono',monospace;font-weight:700;font-size:22px;color:#3BA55C;line-height:1.1;padding-top:2px;">13</div>
+        <div style="flex:1;">
+          <div style="font-family:'Space Grotesk',sans-serif;font-weight:600;font-size:16px;color:#111;margin-bottom:6px;letter-spacing:.2px;">Chirp — “It talks in chirps”</div>
+          <div style="font-family:'Space Grotesk',sans-serif;font-size:13.5px;line-height:1.5;color:#333;text-wrap:pretty;">Go one level deeper for the curious — this is the 'how does it actually work' payoff, and it sets up the 254 km record next: chirp first, proof after. LoRa's secret is Chirp Spread Spectrum (CSS): instead of holding a steady tone, each bit is sent as a chirp — a signal that sweeps smoothly up or down across the whole band, exactly like a bird's chirp or a slide whistle. The funny coincidence worth pointing out: it's literally called a 'chirp', so our festival radios quite literally sing to each other like birds across the forest. Why it was chosen: a chirp is incredibly robust. The receiver knows the exact shape of the sweep it's listening for, so it can pull the chirp out of the noise even when the signal is far weaker than the background hiss — that's how it reaches kilometres on milliwatts. Chirps also shrug off interference, reflections and doppler shift (a device moving in a crowd), because a little distortion still leaves the sweep recognisable. It's the same principle bats and radar use to measure distance. Bottom line: the chirp is why a coin-cell radio can shout across a valley. Fun fact — the technique was patented by a French startup, Cycleo, bought by Semtech.</div>
+        </div>
+      </div>
+      <div style="break-inside:avoid;margin-bottom:26px;display:flex;gap:20px;align-items:flex-start;">
+        <div style="flex:0 0 60px;font-family:'Space Mono',monospace;font-weight:700;font-size:22px;color:#3BA55C;line-height:1.1;padding-top:2px;">14</div>
+        <div style="flex:1;">
+          <div style="font-family:'Space Grotesk',sans-serif;font-weight:600;font-size:16px;color:#111;margin-bottom:6px;letter-spacing:.2px;">Fact</div>
+          <div style="font-family:'Space Grotesk',sans-serif;font-size:13.5px;line-height:1.5;color:#333;text-wrap:pretty;">A punchy palate-cleanser right after the chirp explanation — the chirp is the how, this number is the proof. Let the big number do the work, don't rush past it. 254 kilometres is a real Meshtastic single-hop record: two of these tiny radios talking directly, no repeaters in between, mountaintop to mountaintop across the Canada/US border. Be honest about what it means: it needs clear line of sight and ideal conditions — it's not what you'll get in a crowd — but it shows the raw reach of a coin-cell radio. Then reconnect to the theme: you almost never need one heroic 254 km shot; you chain many modest hops into a mesh so no single device needs line of sight to a mountain. Distance handled by teamwork, not brute force.</div>
+        </div>
+      </div>
+      <div style="break-inside:avoid;margin-bottom:26px;display:flex;gap:20px;align-items:flex-start;">
+        <div style="flex:0 0 60px;font-family:'Space Mono',monospace;font-weight:700;font-size:22px;color:#3BA55C;line-height:1.1;padding-top:2px;">15</div>
+        <div style="flex:1;">
+          <div style="font-family:'Space Grotesk',sans-serif;font-weight:600;font-size:16px;color:#111;margin-bottom:6px;letter-spacing:.2px;">Hardware — “€30 and you're on the air”</div>
+          <div style="font-family:'Space Grotesk',sans-serif;font-size:13.5px;line-height:1.5;color:#333;text-wrap:pretty;">Deflate any 'this sounds expensive/complicated' worry. A ready-to-go board — LilyGo T-Beam or Heltec V3 are the popular ones — is roughly €25–40, about the price of a festival meal or two. The whole shopping list is tiny: the board, a battery (any USB power bank or 18650 works), an antenna (usually included), and a phone you already own. No soldering required to start. Mention you'll pass real units around at the table afterwards so people can feel how small and unintimidating it is — physical props sell this better than any slide.</div>
+        </div>
+      </div>
+      <div style="break-inside:avoid;margin-bottom:26px;display:flex;gap:20px;align-items:flex-start;">
+        <div style="flex:0 0 60px;font-family:'Space Mono',monospace;font-weight:700;font-size:22px;color:#3BA55C;line-height:1.1;padding-top:2px;">16</div>
+        <div style="flex:1;">
+          <div style="font-family:'Space Grotesk',sans-serif;font-weight:600;font-size:16px;color:#111;margin-bottom:6px;letter-spacing:.2px;">MCU LoRa — “Buy the current generation”</div>
+          <div style="font-family:'Space Grotesk',sans-serif;font-size:13.5px;line-height:1.5;color:#333;text-wrap:pretty;">This is the one nerdy slide — pitch it to the buyers who'll shop online later; everyone else can just hear 'ESP32 + SX1262'. Two independent choices on any board. First the brain (microcontroller): ESP32 is the sweet spot — cheap, Wi-Fi/Bluetooth built in, biggest community and best docs, what most boards ship with; nRF52 (RAK4631, Heltec T114) sips far less power if multi-week battery life matters. Second the radio chip: buy the current-generation SX1262 — lower power, better sensitivity, what new boards ship with; older SX127x boards still work fine but waste power for the same range. (If asked: STM32 ready-made units like the Seeed T1000-E exist too, but ESP32 is the starting point.) THE takeaway to repeat out loud: when you buy a cheap module, just make sure it's current-generation — ESP32 with an SX1262 is the safe all-rounder.</div>
+        </div>
+      </div>
+      <div style="break-inside:avoid;margin-bottom:26px;display:flex;gap:20px;align-items:flex-start;">
+        <div style="flex:0 0 60px;font-family:'Space Mono',monospace;font-weight:700;font-size:22px;color:#3BA55C;line-height:1.1;padding-top:2px;">17</div>
+        <div style="flex:1;">
+          <div style="font-family:'Space Grotesk',sans-serif;font-weight:600;font-size:16px;color:#111;margin-bottom:6px;letter-spacing:.2px;">Gallery — “What the tinkering looks like”</div>
+          <div style="font-family:'Space Grotesk',sans-serif;font-size:13.5px;line-height:1.5;color:#333;text-wrap:pretty;">Breather slide, human and casual — just talk over the photos. Show the reality behind the clean diagrams: the actual boards, the tangle of antennas, the half-finished builds and the mess on my desk. Point out one or two things you genuinely remember — the first build that worked, the antenna experiment, the solar setup in the garden. The goal is permission: it looks approachable and a bit scrappy, not like lab equipment, so anyone in the room could picture themselves doing it. Low energy, warm, no new facts.</div>
+        </div>
+      </div>
+      <div style="break-inside:avoid;margin-bottom:26px;display:flex;gap:20px;align-items:flex-start;">
+        <div style="flex:0 0 60px;font-family:'Space Mono',monospace;font-weight:700;font-size:22px;color:#3BA55C;line-height:1.1;padding-top:2px;">18</div>
+        <div style="flex:1;">
+          <div style="font-family:'Space Grotesk',sans-serif;font-weight:600;font-size:16px;color:#111;margin-bottom:6px;letter-spacing:.2px;">Meshtastic — “Meet Meshtastic”</div>
+          <div style="font-family:'Space Grotesk',sans-serif;font-size:13.5px;line-height:1.5;color:#333;text-wrap:pretty;">Now name the software that ties it all together: Meshtastic — free, open-source, community-built, runs on all the boards we just discussed. Clarify the roles so it clicks: the little radio does the networking; your phone is just the screen and keyboard, talking to it over Bluetooth — meaning your phone needs zero signal of its own. Hit the freedoms: no towers, no SIM, no monthly fee, nothing to sign up for. Then the reassurance people always ask about: channels are encrypted (AES), so only people with your channel key can read the messages — your tribe's chat stays private even though the radio waves are public. This slide sets up the live demo next — say 'let me show you'.</div>
+        </div>
+      </div>
+      <div style="break-inside:avoid;margin-bottom:26px;display:flex;gap:20px;align-items:flex-start;">
+        <div style="flex:0 0 60px;font-family:'Space Mono',monospace;font-weight:700;font-size:22px;color:#3BA55C;line-height:1.1;padding-top:2px;">19</div>
+        <div style="flex:1;">
+          <div style="font-family:'Space Grotesk',sans-serif;font-weight:600;font-size:16px;color:#111;margin-bottom:6px;letter-spacing:.2px;">Demo — “No bars. Watch.”</div>
+          <div style="font-family:'Space Grotesk',sans-serif;font-size:13.5px;line-height:1.5;color:#333;text-wrap:pretty;">Live demo — highest-risk, highest-reward moment, so narrate every step out loud for the people who can't see the screen. Plan: send a message from my phone, let it hop across the room, and show it arrive on the second device; then open the node list (who's online) and the map (where they are and how far). Talk while it connects so silence doesn't kill the energy. Pre-empt failure with humour — 'if the radio gods are unkind…' — and have the screenshots ready as the backup so a flaky Bluetooth pairing never stalls the talk. Keep it to a couple of minutes; the goal is a visceral 'oh, it actually works', not a feature tour.</div>
+        </div>
+      </div>
+      <div style="break-inside:avoid;margin-bottom:26px;display:flex;gap:20px;align-items:flex-start;">
+        <div style="flex:0 0 60px;font-family:'Space Mono',monospace;font-weight:700;font-size:22px;color:#3BA55C;line-height:1.1;padding-top:2px;">20</div>
+        <div style="flex:1;">
+          <div style="font-family:'Space Grotesk',sans-serif;font-weight:600;font-size:16px;color:#111;margin-bottom:6px;letter-spacing:.2px;">Freedom — “When they switch it off”</div>
+          <div style="font-family:'Space Grotesk',sans-serif;font-size:13.5px;line-height:1.5;color:#333;text-wrap:pretty;">Lift the stakes — this is the slide that makes the talk matter beyond a festival toy, so let it land seriously. The principle: any network with an owner has an off switch, and whoever owns the switch controls whether you can speak. Concrete example: during the 2022 protests in Iran, authorities throttled and shut down the internet specifically to stop people coordinating — a tactic used in many countries during unrest. Contrast: a mesh you and your friends own has no centre to seize and no plug for anyone to pull — resilience isn't a bonus feature, it's a consequence of the shape we drew back on slide 7. Frame it plainly: this is freedom of communication engineered into the architecture. Same tech that finds your friend at a party keeps people connected when someone tries to cut the cord. Don't preach — state it and pause.</div>
+        </div>
+      </div>
+      <div style="break-inside:avoid;margin-bottom:26px;display:flex;gap:20px;align-items:flex-start;">
+        <div style="flex:0 0 60px;font-family:'Space Mono',monospace;font-weight:700;font-size:22px;color:#3BA55C;line-height:1.1;padding-top:2px;">21</div>
+        <div style="flex:1;">
+          <div style="font-family:'Space Grotesk',sans-serif;font-weight:600;font-size:16px;color:#111;margin-bottom:6px;letter-spacing:.2px;"> — “Which one are you?”</div>
+          <div style="font-family:'Space Grotesk',sans-serif;font-size:13.5px;line-height:1.5;color:#333;text-wrap:pretty;">Call back to the three audiences from slide 4 and let people place themselves — point to each card. The tribe: find each other across forest and crowd. The parents (me included): always reachable by camp without any mobile signal. The preppers: a network that keeps working in a blackout, a disaster, or off-grid when everything centralized is down. The unifying line: it doesn't matter which one you are, the path to building it is the same three steps — which is exactly the next slide. Light, inclusive, momentum-building; this is the turn from 'why' to 'how you start'.</div>
+        </div>
+      </div>
+      <div style="break-inside:avoid;margin-bottom:26px;display:flex;gap:20px;align-items:flex-start;">
+        <div style="flex:0 0 60px;font-family:'Space Mono',monospace;font-weight:700;font-size:22px;color:#3BA55C;line-height:1.1;padding-top:2px;">22</div>
+        <div style="flex:1;">
+          <div style="font-family:'Space Grotesk',sans-serif;font-weight:600;font-size:16px;color:#111;margin-bottom:6px;letter-spacing:.2px;">Build — “Build your own — three steps”</div>
+          <div style="font-family:'Space Grotesk',sans-serif;font-size:13.5px;line-height:1.5;color:#333;text-wrap:pretty;">Demolish the intimidation barrier — say 'genuinely three steps' and mean it. One: buy a board (€25–40, links coming). Two: flash Meshtastic — you literally plug it into a USB port and click install on the official web flasher in your browser, no coding, no command line, a couple of minutes. Three: join a channel — scan a QR code or share a key and your group chat exists. Then widen the horizon so it doesn't feel festival-only: hikers use it where there's no coverage, communities keep it for blackouts and emergencies, off-grid and rural setups run on it year-round. The message: this is a real, general-purpose tool you can start tonight, not a one-weekend gimmick.</div>
+        </div>
+      </div>
+      <div style="break-inside:avoid;margin-bottom:26px;display:flex;gap:20px;align-items:flex-start;">
+        <div style="flex:0 0 60px;font-family:'Space Mono',monospace;font-weight:700;font-size:22px;color:#3BA55C;line-height:1.1;padding-top:2px;">23</div>
+        <div style="flex:1;">
+          <div style="font-family:'Space Grotesk',sans-serif;font-weight:600;font-size:16px;color:#111;margin-bottom:6px;letter-spacing:.2px;">Close — “Here and now”</div>
+          <div style="font-family:'Space Grotesk',sans-serif;font-size:13.5px;line-height:1.5;color:#333;text-wrap:pretty;">The close — slow down, drop the slides, look up, speak from conviction. Tie the bow back to the opening thesis: technology at its best is simple, hidden, and serves people instead of farming their attention. What we built tonight is a network that belongs to you and your friends rather than a corporation — no owner, no off switch, no bill. The call to action, concrete and doable this week: grab a board, flash it, start a channel, find your tribe. End on the festival ethos and the real point of putting the phone down — be here and now. Let that last line hang before you say thank you.</div>
+        </div>
+      </div>
+      <div style="break-inside:avoid;margin-bottom:26px;display:flex;gap:20px;align-items:flex-start;">
+        <div style="flex:0 0 60px;font-family:'Space Mono',monospace;font-weight:700;font-size:22px;color:#3BA55C;line-height:1.1;padding-top:2px;">24</div>
+        <div style="flex:1;">
+          <div style="font-family:'Space Grotesk',sans-serif;font-weight:600;font-size:16px;color:#111;margin-bottom:6px;letter-spacing:.2px;">Q&amp;A — “Questions?”</div>
+          <div style="font-family:'Space Grotesk',sans-serif;font-size:13.5px;line-height:1.5;color:#333;text-wrap:pretty;">Open the floor and pull people to the table — hands-on beats Q&amp;A for this crowd, so invite them up to hold a board, send a message, and watch it hop across the room. Keep the two references handy for anyone who asks where to start: meshtastic.org for the software and web flasher; search LilyGo T-Beam or Heltec V3 to buy a board. Likely questions to be ready for: range in a real crowd (less than the record, but a mesh compensates), battery life (days, weeks with solar), is it legal (yes on the license-free band, respect local power limits), is it private (yes, encrypted channels), does it need a phone (only as a keyboard, no signal). Relaxed and generous — this is the part where the tinkerers find each other.</div>
+        </div>
+      </div>
+</x-import>
+</x-dc>
+</body>
+</html>
