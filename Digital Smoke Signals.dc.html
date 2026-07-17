@@ -696,6 +696,21 @@
 <script type="text/x-dc" data-dc-script>
 
 class Component extends DCLogic {
+  componentDidMount() {
+    this._railOn = true;
+    try { if (localStorage.getItem('deck-stage.railVisible') === '0') this._railOn = false; } catch (e) {}
+    this._onKey = (e) => {
+      if (e.key !== 't' && e.key !== 'T') return;
+      const el = e.target;
+      if (el && (el.isContentEditable || /^(input|textarea|select)$/i.test(el.tagName))) return;
+      this._railOn = !this._railOn;
+      window.postMessage({ type: '__deck_rail_visible', on: this._railOn }, '*');
+    };
+    window.addEventListener('keydown', this._onKey);
+  }
+  componentWillUnmount() {
+    if (this._onKey) window.removeEventListener('keydown', this._onKey);
+  }
   renderVals() { return {}; }
 }
 </script>
