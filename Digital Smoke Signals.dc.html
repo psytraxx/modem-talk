@@ -58,6 +58,8 @@
     section[data-deck-active] > *:nth-child(6) { animation-delay:.5s; }
     section[data-deck-active] > *:nth-child(7) { animation-delay:.6s; }
   }
+  /* empty bio slots rise above filled ones so drag-and-drop reaches them */
+  .bio-fader:has(image-slot:not([data-filled])) { z-index:20 !important; animation-play-state:paused !important; opacity:1; }
   @keyframes slideshowFade { 0%{opacity:1} 27%{opacity:1} 33%{opacity:0} 94%{opacity:0} 100%{opacity:1} }
   * { text-wrap: pretty; }
 </style>
@@ -99,13 +101,13 @@
 
 <section data-label="Hi, I'm Eric" data-screen-label="03 Bio" data-speaker-notes="Keep it short — credibility, not CV. Points to land: software engineer by trade, so I care how things actually work under the hood; built the backstage and ticketing systems for Mo:Dem with Chris, so I know this world from both sides. Been coming to psy and goa gatherings since around 2000 — the reference to 'my people' is real. Now I come as a dad who camps with kids, which is where the 'need to stay reachable' angle comes from personally. Recently AI tooling lowered the barrier and pulled me back into hardware tinkering. Thesis I'll return to at the end: the best tech is simple, hidden, and serves people rather than harvesting them." style="box-sizing:border-box;padding:90px 110px 80px;background:#0E0A18;color:#ECE6F4;font-family:'Space Grotesk',sans-serif;display:flex;flex-direction:row;align-items:center;gap:80px;overflow:hidden;">
   <div style="flex:0 0 520px;height:680px;border:1px solid rgba(255,255,255,.1);border-radius:18px;overflow:hidden;position:relative;background:#150E26;">
-    <div style="position:absolute;inset:0;animation:slideshowFade 15s linear infinite;animation-delay:-5s;z-index:1;">
-      <x-import component-from-global-scope="image-slot" from="./image-slot.js" id="bio-slide-2" shape="rect" placeholder="Drop photo 2" hint-size="520px,680px" style="position:absolute;inset:0;"></x-import>
+    <div class="bio-fader" style="position:absolute;inset:0;animation:slideshowFade 15s linear infinite;animation-delay:-5s;z-index:1;">
+      <x-import component-from-global-scope="image-slot" from="./image-slot.js" id="bio-slide-2" shape="rect" src="uploads/bio-slide-2.webp" placeholder="Drop photo 2" hint-size="520px,680px" style="position:absolute;inset:0;"></x-import>
     </div>
-    <div style="position:absolute;inset:0;animation:slideshowFade 15s linear infinite;animation-delay:-10s;z-index:2;">
-      <x-import component-from-global-scope="image-slot" from="./image-slot.js" id="bio-slide-3" shape="rect" placeholder="Drop photo 3" hint-size="520px,680px" style="position:absolute;inset:0;"></x-import>
+    <div class="bio-fader" style="position:absolute;inset:0;animation:slideshowFade 15s linear infinite;animation-delay:-10s;z-index:2;">
+      <x-import component-from-global-scope="image-slot" from="./image-slot.js" id="bio-slide-3" shape="rect" src="uploads/bio-slide-3.webp" placeholder="Drop photo 3" hint-size="520px,680px" style="position:absolute;inset:0;"></x-import>
     </div>
-    <div style="position:absolute;inset:0;animation:slideshowFade 15s linear infinite;z-index:3;">
+    <div class="bio-fader" style="position:absolute;inset:0;animation:slideshowFade 15s linear infinite;z-index:3;">
       <x-import component-from-global-scope="image-slot" from="./image-slot.js" id="bio-slide-1" shape="rect" src="uploads/Screenshot_20240310-075312.png" placeholder="Drop photo 1" hint-size="520px,680px" style="position:absolute;inset:0;"></x-import>
     </div>
   </div>
@@ -123,14 +125,14 @@
   </div>
 </section>
 
-<section data-label="Your Phone Is Hungry" data-screen-label="04 Why" data-speaker-notes="Not anti-phone — anti-business-model. The phone is a miracle of engineering; the problem is the attention economy layered on top, engineered to maximise time-on-screen. Contrast that with the thing we'll build: single-purpose, no feed, no ads, no algorithm — it does one job and then gets out of your way. Flag the three audiences here so people self-identify early (this pays off on the 'Which one are you' slide near the end): the tribe finding each other, the parents staying reachable, the low-tech folks who want a tool that doesn't hook them." style="box-sizing:border-box;padding:90px 110px 80px;background:#0E0A18;color:#ECE6F4;font-family:'Space Grotesk',sans-serif;display:flex;flex-direction:column;justify-content:center;overflow:hidden;">
+<section data-label="Your Phone Is Hungry" data-screen-label="04 Why" data-speaker-notes="Not anti-phone — anti-business-model. The phone is a miracle of engineering; the problem is the attention economy layered on top, engineered to maximise time-on-screen. Contrast that with the thing we'll build: single-purpose, no feed, no ads, no algorithm — it does one job and then gets out of your way. Flag the three audiences here so people self-identify early (this pays off on the 'Which one are you' slide near the end): the tribe finding each other, the parents staying reachable, and the preppers who want a network that works when everything else is down." style="box-sizing:border-box;padding:90px 110px 80px;background:#0E0A18;color:#ECE6F4;font-family:'Space Grotesk',sans-serif;display:flex;flex-direction:column;justify-content:center;overflow:hidden;">
   <div style="font-family:'Space Mono',monospace;font-size:24px;letter-spacing:4px;color:#9DE84B;margin-bottom:24px;">// 04 · WHY THIS MATTERS</div>
   <h2 style="font-family:'Chakra Petch',sans-serif;font-weight:600;font-size:88px;line-height:1.0;margin:0;max-width:1500px;">Your phone is <span style="color:#FF8A3D;">hungry</span></h2>
   <p style="font-size:38px;line-height:1.4;color:#C9BEDA;margin:36px 0 0;max-width:1300px;">Even with bars, your phone isn't built to just pass a note to your friend. It's built to eat your attention — notifications, feeds, endless things to scroll — every time you unlock it to send one message.</p>
   <div style="margin-top:56px;background:#150E26;border:1px solid rgba(255,255,255,.07);border-radius:14px;padding:32px 40px;font-size:32px;line-height:1.4;color:#ECE6F4;max-width:1400px;"><span style="color:#9DE84B;font-family:'Chakra Petch',sans-serif;font-weight:600;font-size:26px;margin-right:14px;">SO →</span>what if the device in your pocket for this one job did nothing else? <span style="color:#9A8BB2;">Tonight, I'm building one.</span></div>
 </section>
 
-<section data-label="The Plan" data-screen-label="05 Roadmap" data-speaker-notes="Roadmap slide — tell them where we're going so the theory feels earned. The destination: a device smaller than a candy bar that pairs with your phone and passes messages straight to your friends' devices — no cell tower, no SIM, no monthly bill, works with zero bars. The slide now shows three short stops — how networks work, the secret radio, build yours tonight — and one expectation line: twenty minutes of how, then you hold one. Say the theory is short so nobody dreads it, and land the payoff: you'll leave knowing how to make one." style="box-sizing:border-box;padding:90px 110px 80px;background:#0E0A18;color:#ECE6F4;font-family:'Space Grotesk',sans-serif;display:flex;flex-direction:column;justify-content:center;overflow:hidden;">
+<section data-label="The Plan" data-screen-label="05 Roadmap" data-speaker-notes="Roadmap slide — tell them where we're going so the theory feels earned. The destination: a device smaller than a candy bar that pairs with your phone and passes messages straight to your friends' devices — no cell tower, no SIM, no monthly bill, works with zero bars. The slide shows three short stops — how networks work, the secret radio, build one or join one — and one expectation line: twenty minutes of how, then you'll know enough to build one or join ours. Say the theory is short so nobody dreads it, and land the payoff: leave able to build your own or join the mesh we already run." style="box-sizing:border-box;padding:90px 110px 80px;background:#0E0A18;color:#ECE6F4;font-family:'Space Grotesk',sans-serif;display:flex;flex-direction:column;justify-content:center;overflow:hidden;">
   <div style="font-family:'Space Mono',monospace;font-size:24px;letter-spacing:4px;color:#9DE84B;margin-bottom:24px;">// 05 · THE PLAN</div>
   <h2 style="font-family:'Chakra Petch',sans-serif;font-weight:600;font-size:80px;line-height:1.05;margin:0;max-width:1500px;">A radio smaller than a candy bar. <span style="color:#9DE84B;">No towers. No bill.</span></h2>
   <p style="font-size:34px;line-height:1.4;color:#9A8BB2;margin:32px 0 0;max-width:1300px;">Twenty minutes of how — then you'll know enough to build one or join ours.</p>
