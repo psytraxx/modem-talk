@@ -593,11 +593,13 @@
   <h2 style="font-family:'Chakra Petch',sans-serif;font-weight:600;font-size:84px;line-height:1.0;margin:0;">No bars. Watch.</h2>
   <p style="font-size:34px;line-height:1.4;color:#C9BEDA;margin:24px 0 0;max-width:1200px;">Let's send a real message across this room — and watch the map light up.</p>
   <div style="display:flex;gap:28px;margin-top:36px;flex:1;">
-    <div style="flex:1.4;background:repeating-linear-gradient(45deg,#1A1230,#1A1230 14px,#170F29 14px,#170F29 28px);border:1px solid rgba(255,255,255,.1);border-radius:16px;display:flex;align-items:center;justify-content:center;text-align:center;color:#9A8BB2;font-family:'Space Mono',monospace;font-size:26px;">[ live node map / range — screenshot backup ]</div>
-    <div style="flex:1;display:flex;flex-direction:column;gap:28px;">
-      <div style="flex:1;background:repeating-linear-gradient(45deg,#1A1230,#1A1230 14px,#170F29 14px,#170F29 28px);border:1px solid rgba(255,255,255,.1);border-radius:16px;display:flex;align-items:center;justify-content:center;text-align:center;color:#9A8BB2;font-family:'Space Mono',monospace;font-size:24px;padding:20px;">[ chat thread ]</div>
-      <div style="flex:1;background:repeating-linear-gradient(45deg,#1A1230,#1A1230 14px,#170F29 14px,#170F29 28px);border:1px solid rgba(255,255,255,.1);border-radius:16px;display:flex;align-items:center;justify-content:center;text-align:center;color:#9A8BB2;font-family:'Space Mono',monospace;font-size:24px;padding:20px;">[ node list · signal ]</div>
+    <div style="flex:1;position:relative;background:#170F29;border:1px solid rgba(255,255,255,.1);border-radius:16px;overflow:hidden;"><x-import component-from-global-scope="image-slot" from="./image-slot.js" id="demo-map" shape="rect" src="uploads/meshtastic-map-shot.webp" placeholder="Drop screenshot: node map / range" hint-size="100%,100%" style="position:absolute;inset:0;width:100%;height:100%;"></x-import></div>
+    <div style="flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;gap:24px;background:radial-gradient(120% 120% at 50% 40%, #241436 0%, #170F29 70%);border:1px solid rgba(157,232,75,.35);border-radius:16px;padding:40px;">
+      <span style="width:18px;height:18px;border-radius:50%;background:#FF5A4A;box-shadow:0 0 18px rgba(255,90,74,.9);animation:blink 1.4s ease-in-out infinite;"></span>
+      <div style="font-family:'Chakra Petch',sans-serif;font-weight:700;font-size:60px;line-height:1.0;color:#9DE84B;">Demo time</div>
+      <div style="font-family:'Space Mono',monospace;font-size:26px;letter-spacing:2px;color:#C9BEDA;">may the demo gods be with us 🙏</div>
     </div>
+    <div style="flex:1;position:relative;background:#170F29;border:1px solid rgba(255,255,255,.1);border-radius:16px;overflow:hidden;"><x-import component-from-global-scope="image-slot" from="./image-slot.js" id="demo-nodes" shape="rect" src="uploads/meshtastic-nodes-shot.webp" placeholder="Drop screenshot: node list / signal" hint-size="100%,100%" style="position:absolute;inset:0;width:100%;height:100%;"></x-import></div>
   </div>
 </section>
 
