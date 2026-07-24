@@ -130,7 +130,7 @@
 <section data-label="Your Phone Is Hungry" data-screen-label="04 Why" data-speaker-notes="Not anti-phone — anti-business-model. The phone is a miracle of engineering; the problem is the attention economy layered on top, engineered to maximise time-on-screen. Contrast that with the thing we'll build: single-purpose, no feed, no ads, no algorithm — it does one job and then gets out of your way. Flag the three audiences here so people self-identify early (this pays off on the 'Which one are you' slide near the end): the tribe finding each other, the parents staying reachable, and the preppers who want a network that works when everything else is down." style="box-sizing:border-box;padding:90px 110px 80px;background:#0E0A18;color:#ECE6F4;font-family:'Space Grotesk',sans-serif;display:flex;flex-direction:column;justify-content:center;overflow:hidden;">
   <div style="font-family:'Space Mono',monospace;font-size:28px;letter-spacing:4px;color:#9DE84B;margin-bottom:24px;">// 04 · WHY THIS MATTERS</div>
   <h2 style="font-family:'Chakra Petch',sans-serif;font-weight:600;font-size:88px;line-height:1.0;margin:0;max-width:1500px;">Your phone is <span style="color:#FF8A3D;">hungry</span></h2>
-  <p style="font-size:44px;line-height:1.4;color:#C9BEDA;margin:36px 0 0;max-width:1300px;">Even with bars, your phone isn't built to just pass a note to your friend. It's built to eat your attention — notifications, feeds, endless things to scroll — every time you unlock it to send one message.</p>
+  <p style="font-size:44px;line-height:1.4;color:#C9BEDA;margin:36px 0 0;max-width:1300px;">Even with bars, it isn't built to pass a note to a friend. It's built to <span style="color:#ECE6F4;">eat your attention</span> — feeds, notifications, endless scroll.</p>
   <div style="margin-top:56px;background:#150E26;border:1px solid rgba(255,255,255,.07);border-radius:14px;padding:32px 40px;font-size:37px;line-height:1.4;color:#ECE6F4;max-width:1400px;"><span style="color:#9DE84B;font-family:'Chakra Petch',sans-serif;font-weight:600;font-size:30px;margin-right:14px;">SO →</span>what if the device in your pocket for this one job did nothing else? <span style="color:#9A8BB2;">Tonight, I'm building one.</span></div>
 </section>
 
@@ -474,7 +474,7 @@
       <div style="font-size:32px;color:#C9BEDA;margin-top:14px;">only — and that's the point</div>
     </div>
   </div>
-  <div style="margin-top:40px;background:#150E26;border:1px solid rgba(255,255,255,.07);border-radius:14px;padding:30px 40px;font-size:37px;line-height:1.4;color:#ECE6F4;">No photos, no video, no endless scrolling. <span style="color:#9A8BB2;">One look tells you what you need — then the phone goes back in the pocket. You save time, and you stay at the festival.</span></div>
+  <div style="margin-top:40px;background:#150E26;border:1px solid rgba(255,255,255,.07);border-radius:14px;padding:30px 40px;font-size:37px;line-height:1.4;color:#ECE6F4;">No photos, no video, no scrolling. <span style="color:#9A8BB2;">One look — then the phone goes back in your pocket.</span></div>
   <div style="margin-top:22px;font-family:'Space Mono',monospace;font-size:26px;color:#9A8BB2;">Bands and max power are set by regulation and differ by country — check your local rules.</div>
 </section>
 
@@ -538,27 +538,30 @@
 
 <section data-label="Choosing Your Chip" data-screen-label="16 MCU LoRa" data-speaker-notes="This is the one nerdy slide — pitch it to the buyers who'll shop online later; everyone else can just hear 'ESP32 + SX1262'. Two independent choices on any board. First the brain (microcontroller): ESP32 is the sweet spot — cheap, Wi-Fi/Bluetooth built in, biggest community and best docs, what most boards ship with; nRF52 (RAK4631, Heltec T114) sips far less power if multi-week battery life matters. Second the radio chip: buy the current-generation SX1262 — lower power, better sensitivity, what new boards ship with; older SX127x boards still work fine but waste power for the same range. (If asked: STM32 ready-made units like the Seeed T1000-E exist too, but ESP32 is the starting point.) THE takeaway to repeat out loud: when you buy a cheap module, just make sure it's current-generation — ESP32 with an SX1262 is the safe all-rounder." style="box-sizing:border-box;padding:80px 110px 70px;background:#0E0A18;color:#ECE6F4;font-family:'Space Grotesk',sans-serif;display:flex;flex-direction:column;overflow:hidden;">
   <div style="font-family:'Space Mono',monospace;font-size:28px;letter-spacing:4px;color:#9DE84B;margin-bottom:20px;">// 16 · CHOOSING YOUR CHIP</div>
-  <h2 style="font-family:'Chakra Petch',sans-serif;font-weight:600;font-size:72px;line-height:1.0;margin:0;">Buy the current generation</h2>
-  <p style="font-size:37px;line-height:1.4;color:#9A8BB2;margin:22px 0 0;max-width:1400px;">Cheap modules are everywhere. One rule: <span style="color:#9DE84B;">ESP32 + SX1262.</span></p>
-  <div style="display:flex;gap:36px;margin-top:40px;flex:1;">
-    <div style="flex:1;background:#150E26;border:1px solid rgba(255,255,255,.08);border-radius:16px;padding:36px 40px;display:flex;flex-direction:column;">
-      <div style="font-family:'Space Mono',monospace;font-size:26px;letter-spacing:3px;color:#4FD6FF;margin-bottom:8px;">THE MICROCONTROLLER</div>
-      <div style="font-family:'Chakra Petch',sans-serif;font-size:51px;color:#ECE6F4;margin-bottom:22px;">MCU options</div>
-      <ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:20px;">
-        <li style="font-size:35px;line-height:1.4;color:#C9BEDA;"><span style="color:#4FD6FF;">ESP32</span> — <span style="color:#ECE6F4;">Heltec V3, T-Beam</span>. The default.</li>
-        <li style="font-size:35px;line-height:1.4;color:#C9BEDA;"><span style="color:#4FD6FF;">nRF52</span> — <span style="color:#ECE6F4;">RAK4631, T114</span>. Weeks of battery.</li>
-        <li style="font-size:35px;line-height:1.4;color:#C9BEDA;"><span style="color:#4FD6FF;">Ready-made</span> — <span style="color:#ECE6F4;">Seeed T1000-E, Card Tracker</span>. No fuss.</li>
-      </ul>
-      <div style="margin-top:auto;padding-top:24px;font-size:30px;color:#9DE84B;">→ <span style="color:#ECE6F4;">ESP32</span> — what most boards ship with.</div>
+  <h2 style="font-family:'Chakra Petch',sans-serif;font-weight:600;font-size:72px;line-height:1.0;margin:0;">One rule when you buy</h2>
+  <p style="font-size:37px;line-height:1.4;color:#9A8BB2;margin:22px 0 0;max-width:1400px;">Cheap modules are everywhere. You only need to remember two words.</p>
+  <div style="flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:44px;">
+    <div style="display:flex;align-items:center;gap:44px;">
+      <div style="background:#18220E;border:2px solid #9DE84B;border-radius:22px;padding:38px 58px;text-align:center;box-shadow:0 0 30px rgba(157,232,75,.22);">
+        <div style="font-family:'Space Mono',monospace;font-size:24px;letter-spacing:3px;color:#4FD6FF;margin-bottom:12px;">THE BRAIN</div>
+        <div style="font-family:'Chakra Petch',sans-serif;font-weight:700;font-size:88px;line-height:1;color:#ECE6F4;">ESP32</div>
+        <div style="font-family:'Space Mono',monospace;font-size:26px;color:#9DE84B;margin-top:14px;">✓ buy this</div>
+      </div>
+      <div style="font-family:'Chakra Petch',sans-serif;font-weight:700;font-size:80px;color:#6B5B86;">+</div>
+      <div style="background:#18220E;border:2px solid #9DE84B;border-radius:22px;padding:38px 58px;text-align:center;box-shadow:0 0 30px rgba(157,232,75,.22);">
+        <div style="font-family:'Space Mono',monospace;font-size:24px;letter-spacing:3px;color:#9DE84B;margin-bottom:12px;">THE RADIO</div>
+        <div style="font-family:'Chakra Petch',sans-serif;font-weight:700;font-size:88px;line-height:1;color:#ECE6F4;">SX1262</div>
+        <div style="font-family:'Space Mono',monospace;font-size:26px;color:#9DE84B;margin-top:14px;">✓ buy this</div>
+      </div>
     </div>
-    <div style="flex:1;background:#150E26;border:1px solid rgba(255,255,255,.08);border-radius:16px;padding:36px 40px;display:flex;flex-direction:column;">
-      <div style="font-family:'Space Mono',monospace;font-size:26px;letter-spacing:3px;color:#9DE84B;margin-bottom:8px;">THE RADIO</div>
-      <div style="font-family:'Chakra Petch',sans-serif;font-size:51px;color:#ECE6F4;margin-bottom:22px;">LoRa modules</div>
-      <ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:20px;">
-        <li style="font-size:35px;line-height:1.4;color:#C9BEDA;"><span style="color:#9DE84B;">SX1262</span> — current gen. <span style="color:#ECE6F4;">Buy this.</span></li>
-        <li style="font-size:35px;line-height:1.4;color:#C9BEDA;"><span style="color:#9DE84B;">SX1276/78</span> — older, still fine.</li>
-      </ul>
-      <div style="margin-top:auto;padding-top:24px;font-size:30px;color:#9DE84B;">→ <span style="color:#ECE6F4;">SX1262</span> — better range per milliwatt.</div>
+    <div style="font-size:34px;line-height:1.4;color:#C9BEDA;text-align:center;max-width:1100px;">What most new boards already ship with — the safe all-rounder.</div>
+    <div style="display:flex;align-items:center;gap:28px;flex-wrap:wrap;justify-content:center;background:#150E26;border:1px solid rgba(255,255,255,.07);border-radius:14px;padding:24px 38px;">
+      <span style="font-family:'Space Mono',monospace;font-size:24px;letter-spacing:2px;color:#7E7090;">ONLY IF YOU HAVE A REASON →</span>
+      <span style="font-size:28px;color:#9A8BB2;"><span style="color:#C9BEDA;">nRF52</span> · weeks of battery</span>
+      <span style="color:#4A3A68;">|</span>
+      <span style="font-size:28px;color:#9A8BB2;"><span style="color:#C9BEDA;">SX1276/78</span> · older, still fine</span>
+      <span style="color:#4A3A68;">|</span>
+      <span style="font-size:28px;color:#9A8BB2;"><span style="color:#C9BEDA;">Seeed T1000-E</span> · ready-made</span>
     </div>
   </div>
 </section>
@@ -585,10 +588,10 @@
   <div style="flex:1;">
     <div style="font-family:'Space Mono',monospace;font-size:28px;letter-spacing:4px;color:#9DE84B;margin-bottom:20px;">// 18 · THE SOFTWARE</div>
     <h2 style="font-family:'Chakra Petch',sans-serif;font-weight:600;font-size:80px;line-height:0.98;margin:0;">Meet <span style="color:#9DE84B;text-shadow:0 0 36px rgba(157,232,75,.4);">Meshtastic</span></h2>
-    <p style="font-size:39px;line-height:1.4;color:#C9BEDA;margin:32px 0 0;max-width:760px;">Free, open-source software that turns cheap <span style="color:#9DE84B;">LoRa</span> radios into your own private mesh. LoRa is the voice — <span style="color:#ECE6F4;">Meshtastic is the language</span>. And your phone? Just the keyboard.</p>
+    <p style="font-size:39px;line-height:1.4;color:#C9BEDA;margin:32px 0 0;max-width:760px;">Free, open-source software that turns cheap <span style="color:#9DE84B;">LoRa</span> radios into your own private mesh — a network that belongs to <span style="color:#ECE6F4;">you and your friends</span>, not a company.</p>
     <ul style="list-style:none;padding:0;margin:40px 0 0;display:flex;flex-direction:column;gap:22px;">
       <li style="display:flex;align-items:center;gap:18px;font-size:36px;color:#ECE6F4;"><span style="width:11px;height:11px;border-radius:50%;background:#9DE84B;box-shadow:0 0 12px rgba(157,232,75,.7);"></span>No towers, no SIM card, no monthly plan</li>
-      <li style="display:flex;align-items:center;gap:18px;font-size:36px;color:#ECE6F4;"><span style="width:11px;height:11px;border-radius:50%;background:#FF8A3D;box-shadow:0 0 12px rgba(255,138,61,.7);"></span>Connects to your phone over Bluetooth</li>
+      <li style="display:flex;align-items:center;gap:18px;font-size:36px;color:#ECE6F4;"><span style="width:11px;height:11px;border-radius:50%;background:#FF8A3D;box-shadow:0 0 12px rgba(255,138,61,.7);"></span>Nothing to sign up for — no account, no company</li>
       <li style="display:flex;align-items:center;gap:18px;font-size:36px;color:#ECE6F4;"><span style="width:11px;height:11px;border-radius:50%;background:#4FD6FF;box-shadow:0 0 12px rgba(79,214,255,.7);"></span>Messages are encrypted — only your tribe can read them</li>
       <li style="display:flex;align-items:center;gap:18px;font-size:36px;color:#ECE6F4;"><span style="width:11px;height:11px;border-radius:50%;background:#C96BFF;box-shadow:0 0 12px rgba(201,107,255,.7);"></span>Open source — it belongs to everyone</li>
     </ul>
@@ -607,7 +610,7 @@
 <section data-label="Under the Hood" data-screen-label="19 How" data-speaker-notes="Explain the architecture so the hardware makes sense. At its core Meshtastic is just firmware — software burned onto a tiny microcontroller (MCU). That firmware does two jobs: it drives the LoRa radio and it runs the mesh routing. That alone is a complete, working node: it will forward everyone else's messages and keep the grid alive — you don't even need a screen. That's why a bare board on a battery in a tree is useful. THEN the upgrade: if your board also has USB or Bluetooth, you can connect a Meshtastic client — the phone/desktop app. The client doesn't do the networking; it just lets you configure the node and, crucially, type messages on a real keyboard instead of poking at tiny buttons. So: firmware = joins the grid; client = makes it comfortable to use. This sets up why the boards we looked at have BT/USB." style="box-sizing:border-box;padding:80px 110px 70px;background:#0E0A18;color:#ECE6F4;font-family:'Space Grotesk',sans-serif;display:flex;flex-direction:column;overflow:hidden;">
   <div style="font-family:'Space Mono',monospace;font-size:28px;letter-spacing:4px;color:#9DE84B;margin-bottom:16px;">// 19 · UNDER THE HOOD</div>
   <h2 style="font-family:'Chakra Petch',sans-serif;font-weight:600;font-size:76px;line-height:0.98;margin:0;">It's just <span style="color:#9DE84B;text-shadow:0 0 36px rgba(157,232,75,.4);">firmware</span> on a tiny chip</h2>
-  <p style="font-size:35px;line-height:1.4;color:#9A8BB2;margin:20px 0 0;max-width:1400px;">Firmware is just the built-in software baked into a gadget — the same kind of instructions that run your microwave or your car key. Here it does one job: run the radio and pass messages along.</p>
+  <p style="font-size:35px;line-height:1.4;color:#9A8BB2;margin:20px 0 0;max-width:1400px;">Built-in software baked into a gadget — like the instructions in a microwave or a car key. Here, it does one job.</p>
   <div style="display:flex;align-items:center;justify-content:center;gap:18px;margin-top:32px;padding:30px 34px;background:#150E26;border:1px solid rgba(255,255,255,.08);border-radius:24px;">
     <div style="flex:0 0 auto;width:112px;height:186px;border-radius:20px;background:#0E0A18;border:2px solid #FF8A3D;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;box-shadow:0 0 26px rgba(255,138,61,.22);">
       <div style="font-family:'Chakra Petch',sans-serif;font-weight:700;font-size:24px;color:#FF8A3D;line-height:1.1;text-align:center;">You<br><span style="font-size:15px;color:#C9BEDA;">client app</span></div>
@@ -685,21 +688,14 @@
   </div>
 </section>
 
-<section data-label="When They Switch It Off" data-screen-label="21 Freedom" data-speaker-notes="Lift the stakes — this is the slide that makes the talk matter beyond a festival toy, so let it land seriously. The principle: any network with an owner has an off switch, and whoever owns the switch controls whether you can speak. Concrete example: during the 2022 protests in Iran, authorities throttled and shut down the internet specifically to stop people coordinating — a tactic used in many countries during unrest. Contrast: a mesh you and your friends own has no centre to seize and no plug for anyone to pull — resilience isn't a bonus feature, it's a consequence of the shape we drew back on slide 7. Frame it plainly: this is freedom of communication engineered into the architecture. Same tech that finds your friend at a party keeps people connected when someone tries to cut the cord. Don't preach — state it and pause." style="box-sizing:border-box;padding:80px 110px 70px;background:radial-gradient(130% 130% at 18% 30%, #2A1530 0%, #0E0A18 60%);color:#ECE6F4;font-family:'Space Grotesk',sans-serif;display:flex;flex-direction:row;gap:70px;align-items:center;overflow:hidden;">
-  <div style="flex:1;">
-    <div style="font-family:'Space Mono',monospace;font-size:28px;letter-spacing:4px;color:#FF8A3D;margin-bottom:20px;">// 21 · WHY IT REALLY MATTERS</div>
-    <h2 style="font-family:'Chakra Petch',sans-serif;font-weight:600;font-size:76px;line-height:1.0;margin:0;">When they switch it off</h2>
-    <p style="font-size:41px;line-height:1.42;color:#C9BEDA;margin:34px 0 0;max-width:880px;">A network with an owner has an <span style="color:#FF8A3D;">off switch</span>. Governments slow down or shut off the internet to silence people.</p>
-    <div style="margin-top:34px;border-left:3px solid #FF8A3D;padding:6px 0 6px 28px;max-width:880px;">
-      <div style="font-size:37px;line-height:1.4;color:#ECE6F4;">Iran, 2022 — the internet was shut down and throttled across the country during the protests, so people could not organise or be heard.</div>
-    </div>
-    <p style="font-size:39px;line-height:1.42;color:#ECE6F4;margin:34px 0 0;max-width:880px;">A mesh you own has <span style="color:#9DE84B;">no centre to take</span> and no plug to pull. The network is the people.</p>
-  </div>
-  <div style="flex:0 0 640px;display:flex;flex-direction:column;gap:18px;">
-    <div style="position:relative;height:640px;border:1px solid rgba(255,255,255,.12);border-radius:18px;overflow:hidden;">
-      <x-import component-from-global-scope="image-slot" from="./image-slot.js" id="blackout-photo" shape="rect" placeholder="Drop a photo: 2022 Iran protests / internet blackout" hint-size="640px,640px" style="position:absolute;inset:0;" src="uploads/blackout-photo.webp"></x-import>
-    </div>
-    <div style="font-family:'Space Mono',monospace;font-size:28px;color:#9A8BB2;line-height:1.4;">Iran, 2022 — the network goes dark, the streets stay full.</div>
+<section data-label="When They Switch It Off" data-screen-label="21 Freedom" data-speaker-notes="Lift the stakes — this is the slide that makes the talk matter beyond a festival toy, so let it land seriously. The principle: any network with an owner has an off switch, and whoever owns the switch controls whether you can speak. Concrete example: during the 2022 protests in Iran, authorities throttled and shut down the internet specifically to stop people coordinating — a tactic used in many countries during unrest. Contrast: a mesh you and your friends own has no centre to seize and no plug for anyone to pull — resilience isn't a bonus feature, it's a consequence of the shape we drew back on slide 7. Frame it plainly: this is freedom of communication engineered into the architecture. Same tech that finds your friend at a party keeps people connected when someone tries to cut the cord. Don't preach — state it and pause." style="box-sizing:border-box;padding:0;background:#0E0A18;color:#ECE6F4;font-family:'Space Grotesk',sans-serif;position:relative;display:flex;overflow:hidden;">
+  <x-import component-from-global-scope="image-slot" from="./image-slot.js" id="blackout-photo" shape="rect" placeholder="Drop a photo: 2022 Iran protests / internet blackout" hint-size="100%,100%" style="position:absolute;inset:0;width:100%;height:100%;" src="uploads/blackout-photo.webp"></x-import>
+  <div style="position:absolute;inset:0;background:linear-gradient(90deg, rgba(14,10,24,.94) 0%, rgba(14,10,24,.82) 34%, rgba(14,10,24,.34) 70%, rgba(14,10,24,.12) 100%), linear-gradient(0deg, rgba(14,10,24,.85) 0%, rgba(14,10,24,0) 45%);"></div>
+  <div style="position:relative;z-index:2;flex:1;display:flex;flex-direction:column;justify-content:center;padding:80px 110px;max-width:1250px;">
+    <div style="font-family:'Space Mono',monospace;font-size:28px;letter-spacing:4px;color:#FF8A3D;margin-bottom:30px;">// 21 · WHY IT REALLY MATTERS</div>
+    <h2 style="font-family:'Chakra Petch',sans-serif;font-weight:700;font-size:130px;line-height:0.98;margin:0;letter-spacing:-1px;">The network<br>is the people.</h2>
+    <p style="font-size:42px;line-height:1.4;color:#C9BEDA;margin:44px 0 0;max-width:1000px;">A network with an owner has an <span style="color:#FF8A3D;">off switch</span>. A mesh you own has <span style="color:#9DE84B;">no centre to seize and no plug to pull</span>.</p>
+    <div style="font-family:'Space Mono',monospace;font-size:26px;color:#9A8BB2;line-height:1.4;margin-top:48px;">Iran, 2022 — the internet went dark. The streets stayed full.</div>
   </div>
 </section>
 
