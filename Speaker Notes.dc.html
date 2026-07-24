@@ -20,7 +20,7 @@
   <div style="display:flex;align-items:baseline;justify-content:space-between;border-bottom:2px solid #111;padding-bottom:14px;margin-bottom:24px;">
     <div>
       <div style="font-family:'Chakra Petch',sans-serif;font-weight:700;font-size:26px;color:#111;line-height:1;">Digital Smoke Signals</div>
-      <div style="font-family:'Space Grotesk',sans-serif;font-size:13px;color:#3BA55C;font-weight:600;margin-top:4px;letter-spacing:.3px;">SPEAKER NOTES · 24 SLIDES</div>
+      <div style="font-family:'Space Grotesk',sans-serif;font-size:13px;color:#3BA55C;font-weight:600;margin-top:4px;letter-spacing:.3px;">SPEAKER NOTES · 25 SLIDES</div>
     </div>
     <div style="font-family:'Space Mono',monospace;font-size:11px;color:#888;">~18–20 min + demo &amp; Q&amp;A</div>
   </div>
@@ -153,40 +153,47 @@
       <div style="break-inside:avoid;margin-bottom:26px;display:flex;gap:20px;align-items:flex-start;">
         <div style="flex:0 0 60px;font-family:'Space Mono',monospace;font-weight:700;font-size:22px;color:#3BA55C;line-height:1.1;padding-top:2px;">19</div>
         <div style="flex:1;">
+          <div style="font-family:'Space Grotesk',sans-serif;font-weight:600;font-size:16px;color:#111;margin-bottom:6px;letter-spacing:.2px;">Under the Hood — “It's just firmware on a tiny chip”</div>
+          <div style="font-family:'Space Grotesk',sans-serif;font-size:13.5px;line-height:1.5;color:#333;text-wrap:pretty;">Explain the architecture so the hardware makes sense. At its core Meshtastic is just firmware — software burned onto a tiny microcontroller (MCU). Introduce the word plainly first (as the slide now does): firmware is the built-in software baked into a gadget, like the instructions that run a microwave or a car key. That firmware does two jobs: it drives the LoRa radio and it runs the mesh routing. That alone is a complete, working node — it forwards everyone else's messages and keeps the grid alive, no screen needed. That's why a bare board on a battery in a tree is useful. THEN the upgrade: if your board also has USB or Bluetooth, you can connect a Meshtastic client — the phone/desktop app. The client doesn't do the networking; it just lets you configure the node and, crucially, type on a real keyboard instead of poking tiny buttons. So: firmware = joins the grid; client = makes it comfortable to use. Sets up why the boards we looked at have Bluetooth/USB.</div>
+        </div>
+      </div>
+      <div style="break-inside:avoid;margin-bottom:26px;display:flex;gap:20px;align-items:flex-start;">
+        <div style="flex:0 0 60px;font-family:'Space Mono',monospace;font-weight:700;font-size:22px;color:#3BA55C;line-height:1.1;padding-top:2px;">20</div>
+        <div style="flex:1;">
           <div style="font-family:'Space Grotesk',sans-serif;font-weight:600;font-size:16px;color:#111;margin-bottom:6px;letter-spacing:.2px;">Demo — “No bars. Watch.”</div>
           <div style="font-family:'Space Grotesk',sans-serif;font-size:13.5px;line-height:1.5;color:#333;text-wrap:pretty;">Live demo — highest-risk, highest-reward moment, so narrate every step out loud for the people who can't see the screen. Plan: send a message from my phone, let it hop across the room, and show it arrive on the second device; then open the node list (who's online) and the map (where they are and how far). Talk while it connects so silence doesn't kill the energy. Pre-empt failure with humour — 'if the radio gods are unkind…' — and have the screenshots ready as the backup so a flaky Bluetooth pairing never stalls the talk. Keep it to a couple of minutes; the goal is a visceral 'oh, it actually works', not a feature tour.</div>
         </div>
       </div>
       <div style="break-inside:avoid;margin-bottom:26px;display:flex;gap:20px;align-items:flex-start;">
-        <div style="flex:0 0 60px;font-family:'Space Mono',monospace;font-weight:700;font-size:22px;color:#3BA55C;line-height:1.1;padding-top:2px;">20</div>
+        <div style="flex:0 0 60px;font-family:'Space Mono',monospace;font-weight:700;font-size:22px;color:#3BA55C;line-height:1.1;padding-top:2px;">21</div>
         <div style="flex:1;">
           <div style="font-family:'Space Grotesk',sans-serif;font-weight:600;font-size:16px;color:#111;margin-bottom:6px;letter-spacing:.2px;">Freedom — “When they switch it off”</div>
           <div style="font-family:'Space Grotesk',sans-serif;font-size:13.5px;line-height:1.5;color:#333;text-wrap:pretty;">Lift the stakes — this is the slide that makes the talk matter beyond a festival toy, so let it land seriously. The principle: any network with an owner has an off switch, and whoever owns the switch controls whether you can speak. Concrete example: during the 2022 protests in Iran, authorities throttled and shut down the internet specifically to stop people coordinating — a tactic used in many countries during unrest. Contrast: a mesh you and your friends own has no centre to seize and no plug for anyone to pull — resilience isn't a bonus feature, it's a consequence of the shape we drew back on slide 7. Frame it plainly: this is freedom of communication engineered into the architecture. Same tech that finds your friend at a party keeps people connected when someone tries to cut the cord. Don't preach — state it and pause.</div>
         </div>
       </div>
       <div style="break-inside:avoid;margin-bottom:26px;display:flex;gap:20px;align-items:flex-start;">
-        <div style="flex:0 0 60px;font-family:'Space Mono',monospace;font-weight:700;font-size:22px;color:#3BA55C;line-height:1.1;padding-top:2px;">21</div>
+        <div style="flex:0 0 60px;font-family:'Space Mono',monospace;font-weight:700;font-size:22px;color:#3BA55C;line-height:1.1;padding-top:2px;">22</div>
         <div style="flex:1;">
-          <div style="font-family:'Space Grotesk',sans-serif;font-weight:600;font-size:16px;color:#111;margin-bottom:6px;letter-spacing:.2px;"> — “Which one are you?”</div>
+          <div style="font-family:'Space Grotesk',sans-serif;font-weight:600;font-size:16px;color:#111;margin-bottom:6px;letter-spacing:.2px;">Which one — “Which one are you?”</div>
           <div style="font-family:'Space Grotesk',sans-serif;font-size:13.5px;line-height:1.5;color:#333;text-wrap:pretty;">Call back to the three audiences from slide 4 and let people place themselves — point to each card. The tribe: find each other across forest and crowd. The parents (me included): always reachable by camp without any mobile signal. The preppers: a network that keeps working in a blackout, a disaster, or off-grid when everything centralized is down. The unifying line: it doesn't matter which one you are, the path to building it is the same three steps — which is exactly the next slide. Light, inclusive, momentum-building; this is the turn from 'why' to 'how you start'.</div>
         </div>
       </div>
       <div style="break-inside:avoid;margin-bottom:26px;display:flex;gap:20px;align-items:flex-start;">
-        <div style="flex:0 0 60px;font-family:'Space Mono',monospace;font-weight:700;font-size:22px;color:#3BA55C;line-height:1.1;padding-top:2px;">22</div>
+        <div style="flex:0 0 60px;font-family:'Space Mono',monospace;font-weight:700;font-size:22px;color:#3BA55C;line-height:1.1;padding-top:2px;">23</div>
         <div style="flex:1;">
           <div style="font-family:'Space Grotesk',sans-serif;font-weight:600;font-size:16px;color:#111;margin-bottom:6px;letter-spacing:.2px;">Build — “Build your own — three steps”</div>
           <div style="font-family:'Space Grotesk',sans-serif;font-size:13.5px;line-height:1.5;color:#333;text-wrap:pretty;">Demolish the intimidation barrier — say 'genuinely three steps' and mean it. One: buy a board (€25–40, links coming). Two: flash Meshtastic — you literally plug it into a USB port and click install on the official web flasher in your browser, no coding, no command line, a couple of minutes. Three: join a channel — scan a QR code or share a key and your group chat exists. Then widen the horizon so it doesn't feel festival-only: hikers use it where there's no coverage, communities keep it for blackouts and emergencies, off-grid and rural setups run on it year-round. The message: this is a real, general-purpose tool you can start tonight, not a one-weekend gimmick.</div>
         </div>
       </div>
       <div style="break-inside:avoid;margin-bottom:26px;display:flex;gap:20px;align-items:flex-start;">
-        <div style="flex:0 0 60px;font-family:'Space Mono',monospace;font-weight:700;font-size:22px;color:#3BA55C;line-height:1.1;padding-top:2px;">23</div>
+        <div style="flex:0 0 60px;font-family:'Space Mono',monospace;font-weight:700;font-size:22px;color:#3BA55C;line-height:1.1;padding-top:2px;">24</div>
         <div style="flex:1;">
           <div style="font-family:'Space Grotesk',sans-serif;font-weight:600;font-size:16px;color:#111;margin-bottom:6px;letter-spacing:.2px;">Close — “Here and now”</div>
           <div style="font-family:'Space Grotesk',sans-serif;font-size:13.5px;line-height:1.5;color:#333;text-wrap:pretty;">The close — slow down, drop the slides, look up, speak from conviction. Tie the bow back to the opening thesis: technology at its best is simple, hidden, and serves people instead of farming their attention. What we built tonight is a network that belongs to you and your friends rather than a corporation — no owner, no off switch, no bill. The call to action, concrete and doable this week: grab a board, flash it, start a channel, find your tribe. End on the festival ethos and the real point of putting the phone down — be here and now. Let that last line hang before you say thank you.</div>
         </div>
       </div>
       <div style="break-inside:avoid;margin-bottom:26px;display:flex;gap:20px;align-items:flex-start;">
-        <div style="flex:0 0 60px;font-family:'Space Mono',monospace;font-weight:700;font-size:22px;color:#3BA55C;line-height:1.1;padding-top:2px;">24</div>
+        <div style="flex:0 0 60px;font-family:'Space Mono',monospace;font-weight:700;font-size:22px;color:#3BA55C;line-height:1.1;padding-top:2px;">25</div>
         <div style="flex:1;">
           <div style="font-family:'Space Grotesk',sans-serif;font-weight:600;font-size:16px;color:#111;margin-bottom:6px;letter-spacing:.2px;">Q&amp;A — “Questions?”</div>
           <div style="font-family:'Space Grotesk',sans-serif;font-size:13.5px;line-height:1.5;color:#333;text-wrap:pretty;">Open the floor and pull people to the table — hands-on beats Q&amp;A for this crowd, so invite them up to hold a board, send a message, and watch it hop across the room. Keep the two references handy for anyone who asks where to start: meshtastic.org for the software and web flasher; search LilyGo T-Beam or Heltec V3 to buy a board. Likely questions to be ready for: range in a real crowd (less than the record, but a mesh compensates), battery life (days, weeks with solar), is it legal (yes on the license-free band, respect local power limits), is it private (yes, encrypted channels), does it need a phone (only as a keyboard, no signal). Relaxed and generous — this is the part where the tinkerers find each other.</div>
