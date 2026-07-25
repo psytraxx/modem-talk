@@ -50,6 +50,7 @@
     section[data-label="A Map of the Airwaves"][data-deck-active] .lora-rect { animation: loraGrow .7s cubic-bezier(.2,.8,.2,1) .4s both; }
     section[data-label="A Map of the Airwaves"][data-deck-active] .lora-label { animation: loraLabelIn .3s ease 1.0s both; }
   }
+  @keyframes packetRun { 0%{left:24%;opacity:0} 6%{opacity:1} 90%{left:74%;opacity:1} 97%{opacity:0} 100%{left:74%;opacity:0} }
   @keyframes deckReveal { from { opacity:0; transform:translateY(26px); } to { opacity:1; transform:translateY(0); } }
   @media (prefers-reduced-motion:no-preference) {
     section[data-deck-active] > * { animation: deckReveal .65s cubic-bezier(.2,.8,.2,1) both; }
@@ -85,19 +86,51 @@
   </div>
 </section>
 
-<section data-label="The Paradox" data-screen-label="02 Paradox" data-speaker-notes="The hook. Everyone in the room has lived this: you're at the festival to unplug, and yet you're holding your phone over your head trying to get one bar to text 'where are you?'. Name the two failures separately — (1) coverage: thousands of people on one rural tower means no signal exactly when you need it; (2) attention: even when it works, opening the phone pulls you into notifications, and twenty minutes later you're scrolling instead of dancing. Tonight solves both. Pause here, let people nod." style="box-sizing:border-box;padding:90px 110px 80px;background:radial-gradient(130% 120% at 80% 20%, #241836 0%, #0E0A18 60%);color:#ECE6F4;font-family:'Space Grotesk',sans-serif;display:flex;flex-direction:column;justify-content:center;overflow:hidden;">
+<section data-label="The Paradox" data-screen-label="02 Paradox" data-speaker-notes="The hook. Everyone in the room has lived this: you're at the festival to unplug, and yet you're holding your phone over your head trying to get one bar to text 'where are you?'. Name the two failures separately — (1) coverage: thousands of people on one rural tower means no signal exactly when you need it; (2) attention: even when it works, opening the phone pulls you into notifications, and twenty minutes later you're scrolling instead of dancing. Tonight solves both. Pause here, let people nod." style="box-sizing:border-box;padding:90px 110px 80px;background:radial-gradient(130% 120% at 80% 20%, #241836 0%, #0E0A18 60%);color:#ECE6F4;font-family:'Space Grotesk',sans-serif;display:flex;flex-direction:row;align-items:center;gap:64px;overflow:hidden;">
+  <div style="flex:1;min-width:0;">
   <div style="font-family:'Space Mono',monospace;font-size:28px;letter-spacing:4px;color:#9DE84B;margin-bottom:28px;">// 02 · THE PARADOX</div>
   <h2 style="font-family:'Chakra Petch',sans-serif;font-weight:600;font-size:96px;line-height:1.02;margin:0;max-width:1500px;">Lost in the crowd</h2>
-  <p style="font-size:48px;line-height:1.4;color:#C9BEDA;margin:44px 0 0;max-width:1280px;">We travel here to escape the <span style="color: rgb(236, 230, 244);">"default world"</span> — then spend the time staring at a screen just to find our friends at the dancefloor.</p>
-  <div style="display:flex;gap:28px;margin-top:64px;max-width:1400px;">
-    <div style="flex:1;background:#1A1230;border:1px solid rgba(255,255,255,.08);border-radius:14px;padding:38px;">
+  <p style="font-size:44px;line-height:1.4;color:#C9BEDA;margin:36px 0 0;">We travel here to escape the <span style="color: rgb(236, 230, 244);">"default world"</span> — then spend the time staring at a screen just to find our friends at the dancefloor.</p>
+  <div style="display:flex;flex-direction:column;gap:22px;margin-top:44px;">
+    <div style="flex:1;background:#1A1230;border:1px solid rgba(255,255,255,.08);border-radius:14px;padding:30px 34px;">
       <div style="font-family:'Space Mono',monospace;font-size:28px;color:#FF8A3D;margin-bottom:16px;">TOO FAR</div>
-      <div style="font-size:35px;line-height:1.4;color:#C9BEDA;">At Mo:Dem there's <span style="color: rgb(236, 230, 244);">no mobile network at all</span> — too far from any tower.</div>
+      <div style="font-size:33px;line-height:1.4;color:#C9BEDA;">At Mo:Dem there's <span style="color: rgb(236, 230, 244);">no mobile network at all</span> — too far from any tower.</div>
     </div>
-    <div style="flex:1;background:#1A1230;border:1px solid rgba(255,255,255,.08);border-radius:14px;padding:38px;">
+    <div style="flex:1;background:#1A1230;border:1px solid rgba(255,255,255,.08);border-radius:14px;padding:30px 34px;">
       <div style="font-family:'Space Mono',monospace;font-size:28px;color:#4FD6FF;margin-bottom:16px;">TOO CROWDED</div>
-      <div style="font-size:35px;line-height:1.4;color:#C9BEDA;">And where there is a signal, too many phones in one field break it fast.</div>
+      <div style="font-size:33px;line-height:1.4;color:#C9BEDA;">And where there is a signal, too many phones in one field break it fast.</div>
     </div>
+  </div>
+  </div>
+  <div style="flex:0 0 680px;align-self:stretch;background:#150E26;border:1px solid rgba(255,255,255,.07);border-radius:16px;position:relative;overflow:hidden;">
+    <svg viewBox="0 0 700 780" width="100%" height="100%" preserveAspectRatio="xMidYMid meet" style="position:absolute;inset:0;">
+      <g stroke="#9DE84B" stroke-width="1.6" opacity="0.6"><line x1="384" y1="467" x2="350" y2="312"></line><line x1="276" y1="584" x2="350" y2="312"></line><line x1="323" y1="646" x2="350" y2="312"></line><line x1="424" y1="659" x2="350" y2="312"></line><line x1="153" y1="650" x2="350" y2="312"></line><line x1="451" y1="703" x2="350" y2="312"></line>
+        <animate attributeName="opacity" dur="12s" repeatCount="indefinite" keyTimes="0;0.5;0.57;0.62;0.92;1" values="0.6;0.6;0.6;0.15;0.15;0.6"></animate>
+      </g>
+      <g stroke="#9DE84B" stroke-width="1.6" opacity="0"><line x1="327" y1="681" x2="350" y2="312"></line><line x1="72" y1="708" x2="350" y2="312"></line><line x1="160" y1="578" x2="350" y2="312"></line><line x1="539" y1="646" x2="350" y2="312"></line><line x1="58" y1="445" x2="350" y2="312"></line><line x1="164" y1="701" x2="350" y2="312"></line><line x1="316" y1="675" x2="350" y2="312"></line><line x1="602" y1="574" x2="350" y2="312"></line><line x1="311" y1="693" x2="350" y2="312"></line><line x1="435" y1="528" x2="350" y2="312"></line><line x1="245" y1="597" x2="350" y2="312"></line><line x1="504" y1="640" x2="350" y2="312"></line><line x1="383" y1="709" x2="350" y2="312"></line><line x1="445" y1="487" x2="350" y2="312"></line><line x1="398" y1="617" x2="350" y2="312"></line><line x1="565" y1="711" x2="350" y2="312"></line><line x1="450" y1="716" x2="350" y2="312"></line><line x1="353" y1="575" x2="350" y2="312"></line><line x1="645" y1="588" x2="350" y2="312"></line><line x1="549" y1="585" x2="350" y2="312"></line><line x1="397" y1="450" x2="350" y2="312"></line><line x1="636" y1="605" x2="350" y2="312"></line>
+        <animate attributeName="opacity" dur="12s" repeatCount="indefinite" keyTimes="0;0.12;0.5;0.6;0.92;1" values="0;0;0.28;0.28;0.28;0"></animate>
+      </g>
+      <g stroke="#FF5A4A" stroke-width="2" stroke-dasharray="4 7" opacity="0"><line x1="384" y1="467" x2="350" y2="312"></line><line x1="276" y1="584" x2="350" y2="312"></line><line x1="323" y1="646" x2="350" y2="312"></line><line x1="424" y1="659" x2="350" y2="312"></line><line x1="153" y1="650" x2="350" y2="312"></line><line x1="451" y1="703" x2="350" y2="312"></line><line x1="327" y1="681" x2="350" y2="312"></line><line x1="72" y1="708" x2="350" y2="312"></line><line x1="160" y1="578" x2="350" y2="312"></line><line x1="539" y1="646" x2="350" y2="312"></line><line x1="58" y1="445" x2="350" y2="312"></line><line x1="164" y1="701" x2="350" y2="312"></line><line x1="316" y1="675" x2="350" y2="312"></line><line x1="602" y1="574" x2="350" y2="312"></line><line x1="311" y1="693" x2="350" y2="312"></line><line x1="435" y1="528" x2="350" y2="312"></line><line x1="245" y1="597" x2="350" y2="312"></line><line x1="504" y1="640" x2="350" y2="312"></line><line x1="383" y1="709" x2="350" y2="312"></line><line x1="445" y1="487" x2="350" y2="312"></line><line x1="398" y1="617" x2="350" y2="312"></line><line x1="565" y1="711" x2="350" y2="312"></line><line x1="450" y1="716" x2="350" y2="312"></line><line x1="353" y1="575" x2="350" y2="312"></line><line x1="645" y1="588" x2="350" y2="312"></line><line x1="549" y1="585" x2="350" y2="312"></line><line x1="397" y1="450" x2="350" y2="312"></line><line x1="636" y1="605" x2="350" y2="312"></line>
+        <animate attributeName="opacity" dur="12s" repeatCount="indefinite" keyTimes="0;0.5;0.57;0.62;0.92;1" values="0;0;0;0.5;0.5;0"></animate>
+      </g>
+      <g stroke="#FF8A3D" stroke-width="7" stroke-linecap="round">
+        <line x1="350" y1="300" x2="316" y2="392"></line><line x1="350" y1="300" x2="384" y2="392"></line>
+        <line x1="330" y1="352" x2="370" y2="352"></line>
+      </g>
+      <circle cx="350" cy="288" r="15" fill="#FF8A3D" style="filter:drop-shadow(0 0 18px rgba(255,138,61,.85));"></circle>
+      <g fill="none" stroke="#FF8A3D" stroke-width="3">
+        <circle cx="350" cy="288" r="15"><animate attributeName="r" dur="2.8s" repeatCount="indefinite" values="15;92"></animate><animate attributeName="opacity" dur="2.8s" repeatCount="indefinite" values="0.7;0"></animate></circle>
+        <circle cx="350" cy="288" r="15"><animate attributeName="r" dur="2.8s" begin="1.4s" repeatCount="indefinite" values="15;92"></animate><animate attributeName="opacity" dur="2.8s" begin="1.4s" repeatCount="indefinite" values="0.7;0"></animate></circle>
+      </g>
+      <text x="350" y="90" text-anchor="middle" font-family="Space Mono, monospace" font-size="24" letter-spacing="3" fill="#FF8A3D">ONE TOWER · ONE OWNER</text>
+      <g fill="#4FD6FF"><circle cx="384" cy="467" r="8"></circle><circle cx="276" cy="584" r="8"></circle><circle cx="323" cy="646" r="8"></circle><circle cx="424" cy="659" r="8"></circle><circle cx="153" cy="650" r="8"></circle><circle cx="451" cy="703" r="8"></circle></g>
+      <g fill="#4FD6FF" opacity="0"><circle cx="327" cy="681" r="8"></circle><circle cx="72" cy="708" r="8"></circle><circle cx="160" cy="578" r="8"></circle><circle cx="539" cy="646" r="8"></circle><circle cx="58" cy="445" r="8"></circle><circle cx="164" cy="701" r="8"></circle><circle cx="316" cy="675" r="8"></circle><circle cx="602" cy="574" r="8"></circle><circle cx="311" cy="693" r="8"></circle><circle cx="435" cy="528" r="8"></circle><circle cx="245" cy="597" r="8"></circle><circle cx="504" cy="640" r="8"></circle><circle cx="383" cy="709" r="8"></circle><circle cx="445" cy="487" r="8"></circle><circle cx="398" cy="617" r="8"></circle><circle cx="565" cy="711" r="8"></circle><circle cx="450" cy="716" r="8"></circle><circle cx="353" cy="575" r="8"></circle><circle cx="645" cy="588" r="8"></circle><circle cx="549" cy="585" r="8"></circle><circle cx="397" cy="450" r="8"></circle><circle cx="636" cy="605" r="8"></circle>
+        <animate attributeName="opacity" dur="12s" repeatCount="indefinite" keyTimes="0;0.12;0.5;0.6;0.92;1" values="0;0;0.85;0.85;0.85;0"></animate>
+      </g>
+      <text x="350" y="128" text-anchor="middle" font-family="Space Mono, monospace" font-size="26" fill="#9DE84B">everyone connected ✓<animate attributeName="opacity" dur="12s" repeatCount="indefinite" keyTimes="0;0.5;0.57;0.62;0.92;1" values="1;1;1;0;0;1"></animate></text>
+      <text x="350" y="128" text-anchor="middle" font-family="Space Mono, monospace" font-size="26" fill="#FF5A4A" opacity="0">tower saturated ✕<animate attributeName="opacity" dur="12s" repeatCount="indefinite" keyTimes="0;0.5;0.57;0.62;0.92;1" values="0;0;0;1;1;0"></animate></text>
+      <text x="350" y="760" text-anchor="middle" font-family="Space Mono, monospace" font-size="24" fill="#7E7090">a field full of phones</text>
+    </svg>
   </div>
 </section>
 
@@ -304,18 +337,47 @@
   <div style="font-family:'Space Mono',monospace;font-size:28px;letter-spacing:4px;color:#9DE84B;margin-bottom:20px;">// 08 · YOU ALREADY USE THESE</div>
   <h2 style="font-family:'Chakra Petch',sans-serif;font-weight:600;font-size:72px;line-height:1.0;margin:0;">Meshes are everywhere</h2>
   <div style="flex:1;display:flex;flex-direction:column;justify-content:center;margin-top:40px;">
-    <p style="font-size:51px;line-height:1.45;color:#C9BEDA;margin:0;max-width:1500px;text-wrap:pretty;">You already trust meshes: <span style="color:#4FD6FF;">the internet</span>, <span style="color:#FF8A3D;">the 5G core</span>, <span style="color:#C96BFF;">the Wi-Fi in your house</span>. Proven tech — you just never see it.</p>
+    <p style="font-size:44px;line-height:1.45;color:#C9BEDA;margin:0;max-width:1500px;text-wrap:pretty;">You already trust meshes: <span style="color:#4FD6FF;">the internet</span>, <span style="color:#FF8A3D;">the 5G core</span>, <span style="color:#C96BFF;">the Wi-Fi in your house</span>. Proven tech — you just never see it.</p>
     <div style="display:flex;gap:28px;margin-top:48px;">
-      <div style="flex:1;background:#1A1230;border:1px solid rgba(255,255,255,.08);border-radius:16px;padding:32px 34px;border-top:3px solid #4FD6FF;">
-        <div style="font-family:'Chakra Petch',sans-serif;font-size:39px;color:#4FD6FF;margin-bottom:14px;">The internet</div>
+      <div style="flex:1;background:#1A1230;border:1px solid rgba(255,255,255,.08);border-radius:16px;padding:24px 30px 28px;border-top:3px solid #4FD6FF;">
+        <svg viewBox="0 0 240 96" width="100%" height="104" preserveAspectRatio="xMidYMid meet" style="margin-bottom:14px;">
+  <g stroke="#4FD6FF" stroke-width="1.8" opacity="0.4">
+    <line x1="22" y1="72" x2="72" y2="26"></line><line x1="72" y1="26" x2="122" y2="64"></line>
+    <line x1="122" y1="64" x2="172" y2="22"></line><line x1="172" y1="22" x2="218" y2="68"></line>
+    <line x1="72" y1="26" x2="172" y2="22"></line><line x1="22" y1="72" x2="122" y2="64"></line>
+  </g>
+  <g stroke="#FF5A4A" stroke-width="1.8" stroke-dasharray="3 5" opacity="0.5"><line x1="122" y1="64" x2="172" y2="22"></line><line x1="22" y1="72" x2="122" y2="64"></line></g>
+  <circle r="6" fill="#ECE6F4"><animateMotion dur="3.2s" repeatCount="indefinite" calcMode="linear" keyPoints="0;0;1;1" keyTimes="0;0.06;0.72;1" path="M 22 72 L 72 26 L 172 22 L 218 68"></animateMotion><animate attributeName="opacity" dur="3.2s" repeatCount="indefinite" keyTimes="0;0.08;0.7;0.76;1" values="0;1;1;0;0"></animate></circle>
+  <g fill="#4FD6FF"><circle cx="22" cy="72" r="7"></circle><circle cx="72" cy="26" r="7"></circle><circle cx="172" cy="22" r="7"></circle><circle cx="218" cy="68" r="7"></circle></g>
+  <circle cx="122" cy="64" r="8" fill="#2A1A1A" stroke="#FF5A4A" stroke-width="2.5"></circle>
+  <text x="122" y="69" text-anchor="middle" font-family="Space Mono, monospace" font-size="10" fill="#FF5A4A">✕</text></svg>
+        <div style="font-family:'Chakra Petch',sans-serif;font-size:39px;color:#4FD6FF;margin-bottom:12px;">The internet</div>
         <div style="font-size:31px;line-height:1.4;color:#C9BEDA;">Routers pass data around outages — built to survive parts going down.</div>
       </div>
-      <div style="flex:1;background:#1A1230;border:1px solid rgba(255,255,255,.08);border-radius:16px;padding:32px 34px;border-top:3px solid #FF8A3D;">
-        <div style="font-family:'Chakra Petch',sans-serif;font-size:39px;color:#FF8A3D;margin-bottom:14px;">The 5G core</div>
+      <div style="flex:1;background:#1A1230;border:1px solid rgba(255,255,255,.08);border-radius:16px;padding:24px 30px 28px;border-top:3px solid #FF8A3D;">
+        <svg viewBox="0 0 240 96" width="100%" height="104" preserveAspectRatio="xMidYMid meet" style="margin-bottom:14px;">
+  <g stroke="#FF8A3D" stroke-width="4" stroke-linecap="round"><line x1="30" y1="80" x2="22" y2="34"></line><line x1="30" y1="80" x2="40" y2="34"></line><line x1="26" y1="58" x2="37" y2="58"></line></g>
+  <circle cx="31" cy="26" r="6" fill="#FF8A3D"></circle>
+  <g fill="none" stroke="#FF8A3D" stroke-width="2"><circle cx="31" cy="26" r="6"><animate attributeName="r" dur="2.4s" repeatCount="indefinite" values="6;30"></animate><animate attributeName="opacity" dur="2.4s" repeatCount="indefinite" values="0.7;0"></animate></circle></g>
+  <g stroke="#FF8A3D" stroke-width="1.8" opacity="0.4"><line x1="31" y1="70" x2="110" y2="44"></line><line x1="110" y1="44" x2="163" y2="70"></line><line x1="163" y1="70" x2="216" y2="36"></line><line x1="110" y1="44" x2="216" y2="36"></line></g>
+  <circle r="5.5" fill="#ECE6F4"><animateMotion dur="2.8s" repeatCount="indefinite" calcMode="linear" keyPoints="0;0;1;1" keyTimes="0;0.06;0.74;1" path="M 31 70 L 110 44 L 163 70 L 216 36"></animateMotion><animate attributeName="opacity" dur="2.8s" repeatCount="indefinite" keyTimes="0;0.08;0.72;0.78;1" values="0;1;1;0;0"></animate></circle>
+  <g fill="#C9BEDA"><circle cx="110" cy="44" r="6"></circle><circle cx="163" cy="70" r="6"></circle><circle cx="216" cy="36" r="6"></circle></g>
+  <text x="163" y="14" text-anchor="middle" font-family="Space Mono, monospace" font-size="12" fill="#7E7090">core hops</text></svg>
+        <div style="font-family:'Chakra Petch',sans-serif;font-size:39px;color:#FF8A3D;margin-bottom:12px;">The 5G core</div>
         <div style="font-size:31px;line-height:1.4;color:#C9BEDA;">Behind the tower, traffic still hops core-to-core like a mesh.</div>
       </div>
-      <div style="flex:1;background:#1A1230;border:1px solid rgba(255,255,255,.08);border-radius:16px;padding:32px 34px;border-top:3px solid #C96BFF;">
-        <div style="font-family:'Chakra Petch',sans-serif;font-size:39px;color:#C96BFF;margin-bottom:14px;">Mesh Wi-Fi</div>
+      <div style="flex:1;background:#1A1230;border:1px solid rgba(255,255,255,.08);border-radius:16px;padding:24px 30px 28px;border-top:3px solid #C96BFF;">
+        <svg viewBox="0 0 240 96" width="100%" height="104" preserveAspectRatio="xMidYMid meet" style="margin-bottom:14px;">
+  <polygon points="34,44 120,12 206,44 206,86 34,86" fill="none" stroke="#4A3A68" stroke-width="2.5"></polygon>
+  <line x1="120" y1="12" x2="120" y2="86" stroke="#4A3A68" stroke-width="1.5" opacity="0.6"></line>
+  <g fill="none" stroke="#C96BFF" stroke-width="2">
+    <circle cx="66" cy="66" r="10"><animate attributeName="r" dur="3s" repeatCount="indefinite" values="10;34"></animate><animate attributeName="opacity" dur="3s" repeatCount="indefinite" values="0.75;0"></animate></circle>
+    <circle cx="120" cy="34" r="10"><animate attributeName="r" dur="3s" begin="1s" repeatCount="indefinite" values="10;34"></animate><animate attributeName="opacity" dur="3s" begin="1s" repeatCount="indefinite" values="0.75;0"></animate></circle>
+    <circle cx="176" cy="70" r="10"><animate attributeName="r" dur="3s" begin="2s" repeatCount="indefinite" values="10;34"></animate><animate attributeName="opacity" dur="3s" begin="2s" repeatCount="indefinite" values="0.75;0"></animate></circle>
+  </g>
+  <g stroke="#C96BFF" stroke-width="1.8" stroke-dasharray="3 5" opacity="0.55"><line x1="66" y1="66" x2="120" y2="34"></line><line x1="120" y1="34" x2="176" y2="70"></line></g>
+  <g fill="#C96BFF"><circle cx="66" cy="66" r="6"></circle><circle cx="120" cy="34" r="6"></circle><circle cx="176" cy="70" r="6"></circle></g></svg>
+        <div style="font-family:'Chakra Petch',sans-serif;font-size:39px;color:#C96BFF;margin-bottom:12px;">Mesh Wi-Fi</div>
         <div style="font-size:31px;line-height:1.4;color:#C9BEDA;">Eero, Nest, Deco — nodes relay to blanket your whole house.</div>
       </div>
     </div>
@@ -462,7 +524,7 @@
 
   <div style="display:flex;gap:28px;margin-top:48px;">
     <div style="flex:1;background:#1A1230;border:1px solid rgba(255,255,255,.08);border-radius:16px;padding:36px 32px;text-align:center;">
-      <div style="font-family:'Chakra Petch',sans-serif;font-size:64px;color:#9DE84B;line-height:1;">2–10<span style="font-size:37px;color:#9A8BB2;"> km</span></div>
+      <div style="font-family:'Chakra Petch',sans-serif;font-size:64px;color:#9DE84B;line-height:1;">2–<span data-countup="10" data-countup-from="2">10</span><span style="font-size:37px;color:#9A8BB2;"> km</span></div>
       <div style="font-size:32px;color:#C9BEDA;margin-top:14px;">from one device to the next</div>
     </div>
     <div style="flex:1;background:#1A1230;border:1px solid rgba(255,255,255,.08);border-radius:16px;padding:36px 32px;text-align:center;">
@@ -481,32 +543,64 @@
 <section data-label="How LoRa Reaches" data-screen-label="13 Chirp" data-speaker-notes="Go one level deeper for the curious — this is the 'how does it actually work' payoff, and it sets up the 254 km record next: chirp first, proof after. LoRa's secret is Chirp Spread Spectrum (CSS): instead of holding a steady tone, each bit is sent as a chirp — a signal that sweeps smoothly up or down across the whole band, exactly like a bird's chirp or a slide whistle. The funny coincidence worth pointing out: it's literally called a 'chirp', so our festival radios quite literally sing to each other like birds across the forest. Why it was chosen: a chirp is incredibly robust. The receiver knows the exact shape of the sweep it's listening for, so it can pull the chirp out of the noise even when the signal is far weaker than the background hiss — that's how it reaches kilometres on milliwatts. Chirps also shrug off interference, reflections and doppler shift (a device moving in a crowd), because a little distortion still leaves the sweep recognisable. It's the same principle bats and radar use to measure distance. Bottom line: the chirp is why a coin-cell radio can shout across a valley. Fun fact — the technique was patented by a French startup, Cycleo, bought by Semtech." style="box-sizing:border-box;padding:80px 110px 70px;background:radial-gradient(120% 130% at 15% 20%, #1B1430 0%, #0E0A18 60%);color:#ECE6F4;font-family:'Space Grotesk',sans-serif;display:flex;flex-direction:column;overflow:hidden;">
   <div style="font-family:'Space Mono',monospace;font-size:28px;letter-spacing:4px;color:#9DE84B;margin-bottom:20px;">// 13 · GOING DEEPER</div>
   <h2 style="font-family:'Chakra Petch',sans-serif;font-weight:600;font-size:72px;line-height:1.0;margin:0;">It talks in <span style="color:#9DE84B;">chirps</span></h2>
-  <p style="font-size:39px;line-height:1.4;color:#C9BEDA;margin:26px 0 0;max-width:1400px;">LoRa = <span style="color:#ECE6F4;">Chirp Spread Spectrum</span>. Every bit is sent as a chirp — a tone sweeping across the band, exactly like a bird's call or a slide whistle. <span style="color:#9DE84B;">Our radios literally sing to each other.</span></p>
-  <div style="display:flex;gap:28px;margin-top:36px;flex:1;">
-    <div style="flex:1;background:#150E26;border:1px solid rgba(255,255,255,.08);border-radius:16px;padding:40px 40px 44px;display:flex;flex-direction:column;justify-content:flex-start;gap:26px;">
-      <svg viewBox="0 0 240 70" width="100%" height="64" preserveAspectRatio="xMidYMid meet"><path d="M 0 35 q 24 -28 48 0 t 40 0 t 34 0 t 28 0 t 24 0 t 20 0 t 16 0 t 14 0" fill="none" stroke="#4FD6FF" stroke-width="4" stroke-dasharray="9 8" style="animation:dashmove 2.6s linear infinite;filter:drop-shadow(0 0 6px rgba(79,214,255,.6));"></path></svg>
-      <div style="font-family:'Chakra Petch',sans-serif;font-size:44px;color:#4FD6FF;">Hears through noise</div>
+  <p style="font-size:35px;line-height:1.4;color:#C9BEDA;margin:22px 0 0;max-width:1400px;">LoRa = <span style="color:#ECE6F4;">Chirp Spread Spectrum</span>. Every bit is sent as a chirp — a tone sweeping across the band, exactly like a bird's call or a slide whistle. <span style="color:#9DE84B;">Our radios literally sing to each other.</span></p>
+  <div style="margin-top:24px;background:#150E26;border:1px solid rgba(255,255,255,.08);border-radius:16px;padding:16px 26px 8px;">
+    <svg viewBox="0 0 1400 196" width="100%" height="184" preserveAspectRatio="xMidYMid meet">
+      <defs><clipPath id="chirpClip"><rect x="66" y="8" width="1314" height="154"></rect></clipPath></defs>
+      <g stroke="rgba(255,255,255,.14)" stroke-width="2"><line x1="66" y1="162" x2="1380" y2="162"></line><line x1="66" y1="8" x2="66" y2="162"></line></g>
+      <g clip-path="url(#chirpClip)">
+        <g stroke="#4A3A68" stroke-width="3" opacity="0.3"><line x1="72" y1="79" x2="72" y2="97"></line><line x1="104" y1="45" x2="104" y2="131"></line><line x1="136" y1="77" x2="136" y2="99"></line><line x1="168" y1="58" x2="168" y2="118"></line><line x1="200" y1="65" x2="200" y2="111"></line><line x1="232" y1="62" x2="232" y2="114"></line><line x1="264" y1="56" x2="264" y2="120"></line><line x1="296" y1="73" x2="296" y2="103"></line><line x1="328" y1="54" x2="328" y2="122"></line><line x1="360" y1="62" x2="360" y2="114"></line><line x1="392" y1="78" x2="392" y2="98"></line><line x1="424" y1="72" x2="424" y2="104"></line><line x1="456" y1="49" x2="456" y2="127"></line><line x1="488" y1="79" x2="488" y2="97"></line><line x1="520" y1="72" x2="520" y2="104"></line><line x1="552" y1="63" x2="552" y2="113"></line><line x1="584" y1="45" x2="584" y2="131"></line><line x1="616" y1="63" x2="616" y2="113"></line><line x1="648" y1="55" x2="648" y2="121"></line><line x1="680" y1="67" x2="680" y2="109"></line><line x1="712" y1="51" x2="712" y2="125"></line><line x1="744" y1="58" x2="744" y2="118"></line><line x1="776" y1="55" x2="776" y2="121"></line><line x1="808" y1="58" x2="808" y2="118"></line><line x1="840" y1="47" x2="840" y2="129"></line><line x1="872" y1="54" x2="872" y2="122"></line><line x1="904" y1="60" x2="904" y2="116"></line><line x1="936" y1="42" x2="936" y2="134"></line><line x1="968" y1="48" x2="968" y2="128"></line><line x1="1000" y1="58" x2="1000" y2="118"></line><line x1="1032" y1="43" x2="1032" y2="133"></line><line x1="1064" y1="52" x2="1064" y2="124"></line><line x1="1096" y1="68" x2="1096" y2="108"></line><line x1="1128" y1="64" x2="1128" y2="112"></line><line x1="1160" y1="72" x2="1160" y2="104"></line><line x1="1192" y1="58" x2="1192" y2="118"></line><line x1="1224" y1="43" x2="1224" y2="133"></line><line x1="1256" y1="45" x2="1256" y2="131"></line><line x1="1288" y1="59" x2="1288" y2="117"></line><line x1="1320" y1="70" x2="1320" y2="106"></line><line x1="1352" y1="64" x2="1352" y2="112"></line></g>
+        <g stroke="#9DE84B" stroke-width="7" stroke-linecap="round" style="filter:drop-shadow(0 0 9px rgba(157,232,75,.55));"><line x1="-160" y1="160" x2="10" y2="12"></line><line x1="60" y1="160" x2="230" y2="12"></line><line x1="280" y1="160" x2="450" y2="12"></line><line x1="500" y1="160" x2="670" y2="12"></line><line x1="720" y1="160" x2="890" y2="12"></line><line x1="940" y1="160" x2="1110" y2="12"></line><line x1="1160" y1="160" x2="1330" y2="12"></line><line x1="1380" y1="160" x2="1550" y2="12"></line>
+          <animateTransform attributeName="transform" type="translate" calcMode="linear" dur="1.9s" repeatCount="indefinite" values="0 0;220 0"></animateTransform>
+        </g>
+      </g>
+      <text x="56" y="22" text-anchor="end" font-family="Space Mono, monospace" font-size="21" fill="#7E7090">high</text>
+      <text x="56" y="166" text-anchor="end" font-family="Space Mono, monospace" font-size="21" fill="#7E7090">low</text>
+      <text x="80" y="192" font-family="Space Mono, monospace" font-size="21" fill="#9DE84B">one chirp = one symbol · the tone sweeps upward</text>
+      <text x="1380" y="192" text-anchor="end" font-family="Space Mono, monospace" font-size="21" fill="#7E7090">time →</text>
+    </svg>
+  </div>
+  <div style="display:flex;gap:28px;margin-top:24px;">
+    <div style="flex:1;background:#150E26;border:1px solid rgba(255,255,255,.08);border-radius:16px;padding:28px 32px 32px;display:flex;flex-direction:column;justify-content:flex-start;gap:18px;">
+      <svg viewBox="0 0 240 70" width="100%" height="72" preserveAspectRatio="xMidYMid meet"><g stroke="#4A3A68" stroke-width="2.5"><line x1="10.0" y1="30.8" x2="10.0" y2="41.2"></line><line x1="18.5" y1="24.3" x2="18.5" y2="47.7"></line><line x1="27.0" y1="27.0" x2="27.0" y2="45.0"></line><line x1="35.5" y1="32.6" x2="35.5" y2="39.4"></line><line x1="44.0" y1="30.7" x2="44.0" y2="41.3"></line><line x1="52.5" y1="22.3" x2="52.5" y2="49.7"></line><line x1="61.0" y1="32.9" x2="61.0" y2="39.1"></line><line x1="69.5" y1="30.6" x2="69.5" y2="41.4"></line><line x1="78.0" y1="27.3" x2="78.0" y2="44.7"></line><line x1="86.5" y1="21.0" x2="86.5" y2="51.0"></line><line x1="95.0" y1="27.4" x2="95.0" y2="44.6"></line><line x1="103.5" y1="24.6" x2="103.5" y2="47.4"></line><line x1="112.0" y1="28.8" x2="112.0" y2="43.2"></line><line x1="120.5" y1="23.1" x2="120.5" y2="48.9"></line><line x1="129.0" y1="25.8" x2="129.0" y2="46.2"></line><line x1="137.5" y1="24.4" x2="137.5" y2="47.6"></line><line x1="146.0" y1="25.5" x2="146.0" y2="46.5"></line><line x1="154.5" y1="21.8" x2="154.5" y2="50.2"></line><line x1="163.0" y1="24.3" x2="163.0" y2="47.7"></line><line x1="171.5" y1="26.4" x2="171.5" y2="45.6"></line><line x1="180.0" y1="20.0" x2="180.0" y2="52.0"></line><line x1="188.5" y1="22.1" x2="188.5" y2="49.9"></line><line x1="197.0" y1="25.5" x2="197.0" y2="46.5"></line><line x1="205.5" y1="20.2" x2="205.5" y2="51.8"></line><line x1="214.0" y1="23.6" x2="214.0" y2="48.4"></line><line x1="222.5" y1="29.3" x2="222.5" y2="42.7"></line><line x1="231.0" y1="27.6" x2="231.0" y2="44.4"></line></g><line x1="8" y1="62" x2="232" y2="10" stroke="#4FD6FF" stroke-width="4" stroke-linecap="round" stroke-dasharray="240" stroke-dashoffset="240" style="filter:drop-shadow(0 0 7px rgba(79,214,255,.8));"><animate attributeName="stroke-dashoffset" dur="2.4s" repeatCount="indefinite" keyTimes="0;0.72;1" values="240;0;0"></animate></line></svg>
+      <div style="font-family:'Chakra Petch',sans-serif;font-size:39px;color:#4FD6FF;">Hears through noise</div>
       <div style="font-size:32px;line-height:1.42;color:#C9BEDA;">Heard even <span style="color:#ECE6F4;">below the background hiss</span> — that's the range.</div>
     </div>
-    <div style="flex:1;background:#150E26;border:1px solid rgba(255,255,255,.08);border-radius:16px;padding:40px 40px 44px;display:flex;flex-direction:column;justify-content:flex-start;gap:26px;">
-      <svg viewBox="0 0 240 70" width="100%" height="64" preserveAspectRatio="xMidYMid meet"><path d="M 0 35 q 24 -28 48 0 t 40 0 t 34 0 t 28 0 t 24 0 t 20 0 t 16 0 t 14 0" fill="none" stroke="#FF8A3D" stroke-width="4" stroke-dasharray="9 8" style="animation:dashmove 2.6s linear infinite;filter:drop-shadow(0 0 6px rgba(255,138,61,.6));"></path></svg>
-      <div style="font-family:'Chakra Petch',sans-serif;font-size:44px;color:#FF8A3D;">Shrugs off chaos</div>
+    <div style="flex:1;background:#150E26;border:1px solid rgba(255,255,255,.08);border-radius:16px;padding:28px 32px 32px;display:flex;flex-direction:column;justify-content:flex-start;gap:18px;">
+      <svg viewBox="0 0 240 70" width="100%" height="72" preserveAspectRatio="xMidYMid meet"><line x1="8" y1="62" x2="232" y2="10" stroke="#6B5B86" stroke-width="2.5" stroke-dasharray="6 7"></line><polyline points="8,63.9 22,60.5 36,60.8 50,50.1 64,44.5 78,42.3 92,42.8 106,37.5 120,33.4 134,33.5 148,28.4 162,30.9 176,26.5 190,18.5 204,12.4 218,9.2 232,7.4" fill="none" stroke="#FF8A3D" stroke-width="4" stroke-linejoin="round" style="filter:drop-shadow(0 0 7px rgba(255,138,61,.7));"><animate attributeName="opacity" dur="2.4s" repeatCount="indefinite" keyTimes="0;0.15;0.85;1" values="0.25;1;1;0.25"></animate></polyline></svg>
+      <div style="font-family:'Chakra Petch',sans-serif;font-size:39px;color:#FF8A3D;">Shrugs off chaos</div>
       <div style="font-size:32px;line-height:1.42;color:#C9BEDA;">Interference, reflections, a moving crowd — the sweep stays <span style="color:#ECE6F4;">recognisable</span>.</div>
     </div>
-    <div style="flex:1;background:#150E26;border:1px solid rgba(255,255,255,.08);border-radius:16px;padding:40px 40px 44px;display:flex;flex-direction:column;justify-content:flex-start;gap:26px;">
-      <svg viewBox="0 0 240 70" width="100%" height="64" preserveAspectRatio="xMidYMid meet"><path d="M 0 35 q 24 -28 48 0 t 40 0 t 34 0 t 28 0 t 24 0 t 20 0 t 16 0 t 14 0" fill="none" stroke="#C96BFF" stroke-width="4" stroke-dasharray="9 8" style="animation:dashmove 2.6s linear infinite;filter:drop-shadow(0 0 6px rgba(201,107,255,.6));"></path></svg>
-      <div style="font-family:'Chakra Petch',sans-serif;font-size:44px;color:#C96BFF;">Nature's trick</div>
+    <div style="flex:1;background:#150E26;border:1px solid rgba(255,255,255,.08);border-radius:16px;padding:28px 32px 32px;display:flex;flex-direction:column;justify-content:flex-start;gap:18px;">
+      <svg viewBox="0 0 240 70" width="100%" height="72" preserveAspectRatio="xMidYMid meet"><circle cx="22" cy="35" r="7" fill="#C96BFF" style="filter:drop-shadow(0 0 8px rgba(201,107,255,.8));"></circle><g fill="none" stroke="#C96BFF" stroke-width="3" stroke-linecap="round"><path d="M 36 17 a 22 22 0 0 1 0 36"><animate attributeName="opacity" dur="2.4s" repeatCount="indefinite" values="0;1;0"></animate></path><path d="M 50 11 a 30 30 0 0 1 0 48"><animate attributeName="opacity" dur="2.4s" begin="0.25s" repeatCount="indefinite" values="0;1;0"></animate></path><path d="M 64 6 a 38 38 0 0 1 0 58"><animate attributeName="opacity" dur="2.4s" begin="0.5s" repeatCount="indefinite" values="0;0.8;0"></animate></path></g><rect x="204" y="26" width="18" height="18" rx="3" fill="none" stroke="#9A8BB2" stroke-width="3"></rect><circle r="5" fill="#ECE6F4" opacity="0"><animateMotion dur="2.4s" begin="1.05s" repeatCount="indefinite" calcMode="linear" path="M 200 35 L 40 35"></animateMotion><animate attributeName="opacity" dur="2.4s" begin="1.05s" repeatCount="indefinite" keyTimes="0;0.05;0.85;1" values="0;1;1;0"></animate></circle></svg>
+      <div style="font-family:'Chakra Petch',sans-serif;font-size:39px;color:#C96BFF;">Nature's trick</div>
       <div style="font-size:32px;line-height:1.42;color:#C9BEDA;"><span style="color:#ECE6F4;">Bats and radar</span> use the same trick.</div>
     </div>
   </div>
 </section>
 
-<section data-label="254 Kilometres" data-screen-label="14 Fact" data-speaker-notes="A punchy palate-cleanser right after the chirp explanation — the chirp is the how, this number is the proof. Let the big number do the work, don't rush past it. 254 kilometres is a real Meshtastic single-hop record: two of these tiny radios talking directly, no repeaters in between, mountaintop to mountaintop across the Canada/US border. Be honest about what it means: it needs clear line of sight and ideal conditions — it's not what you'll get in a crowd — but it shows the raw reach of a coin-cell radio. Then reconnect to the theme: you almost never need one heroic 254 km shot; you chain many modest hops into a mesh so no single device needs line of sight to a mountain. Distance handled by teamwork, not brute force." style="box-sizing:border-box;padding:80px 110px;background:#9DE84B;color:#0E0A18;font-family:'Space Grotesk',sans-serif;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;overflow:hidden;position:relative;">
+<section data-label="254 Kilometres" data-screen-label="14 Fact" data-speaker-notes="A punchy palate-cleanser right after the chirp explanation — the chirp is the how, this number is the proof. Let the big number do the work, don't rush past it. 254 kilometres is a real Meshtastic single-hop record: two of these tiny radios talking directly, no repeaters in between, mountaintop to mountaintop across the Canada/US border. Be honest about what it means: it needs clear line of sight and ideal conditions — it's not what you'll get in a crowd — but it shows the raw reach of a coin-cell radio. Then reconnect to the theme: you almost never need one heroic 254 km shot; you chain many modest hops into a mesh so no single device needs line of sight to a mountain. Distance handled by teamwork, not brute force." style="box-sizing:border-box;padding:70px 110px 330px;background:#9DE84B;color:#0E0A18;font-family:'Space Grotesk',sans-serif;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;overflow:hidden;position:relative;">
   <div style="font-family:'Space Mono',monospace;font-size:30px;letter-spacing:6px;text-transform:uppercase;opacity:0.7;margin-bottom:28px;">// TRUE STORY</div>
-  <div style="font-family:'Chakra Petch',sans-serif;font-weight:700;font-size:260px;line-height:0.9;">254<span style="font-size:120px;">km</span></div>
+  <div style="font-family:'Chakra Petch',sans-serif;font-weight:700;font-size:208px;line-height:0.9;"><span data-countup="254" data-countup-from="0">254</span><span style="font-size:96px;">km</span></div>
   <p style="font-size:48px;line-height:1.4;max-width:1300px;margin:36px 0 0;font-weight:500;">The current LoRa range record for <span style="text-decoration:underline;">two</span> of these radios talking directly to each other. Mountain to mountain, a clear view between them, one hop.</p>
   <p style="font-family:'Space Mono',monospace;font-size:32px;margin:30px 0 0;opacity:0.75;">Now imagine chaining a bunch of them together. That's the mesh part.</p>
-  <p style="font-family:'Space Mono',monospace;font-size:24px;margin:24px 0 0;opacity:0.5;">Source: Meshtastic community range record, Canada/U.S. border.</p>
+  <p style="font-family:'Space Mono',monospace;font-size:24px;margin:22px 0 0;opacity:0.5;">Source: Meshtastic community range record, Canada/U.S. border.</p>
+  <div aria-hidden="true" style="position:absolute;left:0;right:0;bottom:0;height:330px;pointer-events:none;">
+    <svg viewBox="0 0 1600 330" width="100%" height="100%" preserveAspectRatio="none">
+      <polygon points="0,330 90,250 300,120 470,240 690,180 880,255 1120,175 1300,140 1470,245 1600,330" fill="#0E0A18" opacity="0.12"></polygon>
+      <line x1="330" y1="92" x2="1270" y2="122" stroke="#0E0A18" stroke-width="3" stroke-dasharray="14 12" opacity="0.55"></line>
+      <circle r="9" fill="#0E0A18"><animateMotion dur="3.4s" repeatCount="indefinite" calcMode="linear" path="M 330 92 L 1270 122"></animateMotion><animate attributeName="opacity" dur="3.4s" repeatCount="indefinite" keyTimes="0;0.05;0.9;1" values="0;1;1;0"></animate></circle>
+      <text x="800" y="72" text-anchor="middle" font-family="Space Mono, monospace" font-size="26" fill="#0E0A18" opacity="0.65">clear line of sight · one hop</text>
+      <polygon points="0,330 140,215 330,100 560,270 780,205 1000,285 1270,130 1430,250 1600,330 1600,330" fill="#0E0A18" opacity="0.92"></polygon>
+      <g fill="#9DE84B"><circle cx="330" cy="100" r="10"></circle><circle cx="1270" cy="130" r="10"></circle></g>
+      <g fill="none" stroke="#9DE84B" stroke-width="3">
+        <circle cx="330" cy="100" r="10"><animate attributeName="r" dur="2.6s" repeatCount="indefinite" values="10;40"></animate><animate attributeName="opacity" dur="2.6s" repeatCount="indefinite" values="0.9;0"></animate></circle>
+        <circle cx="1270" cy="130" r="10"><animate attributeName="r" dur="2.6s" begin="1.3s" repeatCount="indefinite" values="10;40"></animate><animate attributeName="opacity" dur="2.6s" begin="1.3s" repeatCount="indefinite" values="0.9;0"></animate></circle>
+      </g>
+      <text x="330" y="168" text-anchor="middle" font-family="Space Mono, monospace" font-size="26" fill="#9DE84B">one radio</text>
+      <text x="1270" y="196" text-anchor="middle" font-family="Space Mono, monospace" font-size="26" fill="#9DE84B">one radio</text>
+    </svg>
+  </div>
 </section>
 
 
@@ -609,7 +703,7 @@
   <div style="font-family:'Space Mono',monospace;font-size:28px;letter-spacing:4px;color:#9DE84B;margin-bottom:16px;">// 19 · UNDER THE HOOD</div>
   <h2 style="font-family:'Chakra Petch',sans-serif;font-weight:600;font-size:76px;line-height:0.98;margin:0;">It's just <span style="color:#9DE84B;text-shadow:0 0 36px rgba(157,232,75,.4);">firmware</span> on a tiny chip</h2>
   <p style="font-size:35px;line-height:1.4;color:#9A8BB2;margin:20px 0 0;max-width:1400px;">Built-in software baked into a gadget — like the instructions in a microwave or a car key. Here, it does one job.</p>
-  <div style="display:flex;align-items:center;justify-content:center;gap:18px;margin-top:32px;padding:30px 34px;background:#150E26;border:1px solid rgba(255,255,255,.08);border-radius:24px;">
+  <div style="display:flex;align-items:center;justify-content:center;gap:18px;margin-top:32px;padding:30px 34px;background:#150E26;border:1px solid rgba(255,255,255,.08);border-radius:24px;position:relative;overflow:hidden;">
     <div style="flex:0 0 auto;width:112px;height:186px;border-radius:20px;background:#0E0A18;border:2px solid #FF8A3D;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;box-shadow:0 0 26px rgba(255,138,61,.22);">
       <div style="font-family:'Chakra Petch',sans-serif;font-weight:700;font-size:24px;color:#FF8A3D;line-height:1.1;text-align:center;">You<br><span style="font-size:15px;color:#C9BEDA;">client app</span></div>
       <div style="font-family:'Space Mono',monospace;font-size:30px;color:#C9BEDA;">⌨</div>
@@ -785,9 +879,35 @@ class Component extends DCLogic {
       window.postMessage({ type: '__deck_rail_visible', on: this._railOn }, '*');
     };
     window.addEventListener('keydown', this._onKey);
+    this._countObs = new MutationObserver((muts) => {
+      muts.forEach((m) => {
+        const el = m.target;
+        if (el.nodeType === 1 && el.hasAttribute('data-deck-active')) this._runCounts(el);
+      });
+    });
+    this._countObs.observe(document.body, { subtree: true, attributes: true, attributeFilter: ['data-deck-active'] });
+    setTimeout(() => {
+      document.querySelectorAll('section[data-deck-active]').forEach((s) => this._runCounts(s));
+    }, 500);
+  }
+  _runCounts(sec) {
+    sec.querySelectorAll('[data-countup]').forEach((el) => {
+      const to = parseFloat(el.getAttribute('data-countup'));
+      const from = parseFloat(el.getAttribute('data-countup-from') || '0');
+      if (!isFinite(to)) return;
+      const dur = 1100, t0 = performance.now();
+      const step = (t) => {
+        const p = Math.min(1, (t - t0) / dur);
+        const e = 1 - Math.pow(1 - p, 3);
+        el.textContent = String(Math.round(from + (to - from) * e));
+        if (p < 1) requestAnimationFrame(step);
+      };
+      requestAnimationFrame(step);
+    });
   }
   componentWillUnmount() {
     if (this._onKey) window.removeEventListener('keydown', this._onKey);
+    if (this._countObs) this._countObs.disconnect();
   }
   renderVals() { return {}; }
 }
