@@ -61,9 +61,6 @@
     section[data-deck-active] > *:nth-child(6) { animation-delay:.5s; }
     section[data-deck-active] > *:nth-child(7) { animation-delay:.6s; }
   }
-  /* empty bio slots rise above filled ones so drag-and-drop reaches them */
-  .bio-fader:has(image-slot:not([data-filled])) { z-index:20 !important; animation-play-state:paused !important; opacity:1; }
-  @keyframes slideshowFade { 0%{opacity:1} 27%{opacity:1} 33%{opacity:0} 94%{opacity:0} 100%{opacity:1} }
   * { text-wrap: pretty; }
 </style>
 </helmet>
@@ -104,22 +101,14 @@
 
 <section data-label="Hi, I'm Eric" data-screen-label="03 Bio" data-speaker-notes="Keep it short — credibility, not CV. Points to land: software engineer by trade, so I care how things actually work under the hood; built the backstage and ticketing systems for Mo:Dem with Chris, so I know this world from both sides. Been coming to psy and goa gatherings since around 2000 — the reference to 'my people' is real. Now I come as a dad who camps with kids, which is where the 'need to stay reachable' angle comes from personally. Recently AI tooling lowered the barrier and pulled me back into hardware tinkering. Thesis I'll return to at the end: the best tech is simple, hidden, and serves people rather than harvesting them." style="box-sizing:border-box;padding:90px 110px 80px;background:#0E0A18;color:#ECE6F4;font-family:'Space Grotesk',sans-serif;display:flex;flex-direction:row;align-items:center;gap:80px;overflow:hidden;">
   <div style="flex:0 0 520px;height:680px;border:1px solid rgba(255,255,255,.1);border-radius:18px;overflow:hidden;position:relative;background:#150E26;">
-    <div class="bio-fader" style="position:absolute;inset:0;animation:slideshowFade 15s linear infinite;animation-delay:-5s;z-index:1;">
-      <x-import component-from-global-scope="image-slot" from="./image-slot.js" id="bio-slide-2" shape="rect" src="uploads/bio-slide-2.webp" placeholder="Drop photo 2" hint-size="520px,680px" style="position:absolute;inset:0;"></x-import>
-    </div>
-    <div class="bio-fader" style="position:absolute;inset:0;animation:slideshowFade 15s linear infinite;animation-delay:-10s;z-index:2;">
-      <x-import component-from-global-scope="image-slot" from="./image-slot.js" id="bio-slide-3" shape="rect" src="uploads/bio-slide-3.webp" placeholder="Drop photo 3" hint-size="520px,680px" style="position:absolute;inset:0;"></x-import>
-    </div>
-    <div class="bio-fader" style="position:absolute;inset:0;animation:slideshowFade 15s linear infinite;z-index:3;">
-      <x-import component-from-global-scope="image-slot" from="./image-slot.js" id="bio-slide-1" shape="rect" src="uploads/bio-slide-1.webp" placeholder="Drop photo 1" hint-size="520px,680px" style="position:absolute;inset:0;"></x-import>
-    </div>
+    <x-import component-from-global-scope="image-slot" from="./image-slot.js" id="bio-slide-3" shape="rect" src="uploads/bio-slide-3.webp" placeholder="Drop the life-goals meme" hint-size="520px,680px" style="position:absolute;inset:0;"></x-import>
   </div>
   <div style="flex:1;">
     <div style="font-family:'Space Mono',monospace;font-size:28px;letter-spacing:4px;color:#9DE84B;margin-bottom:24px;">// 03 · WHO'S TALKING</div>
     <h2 style="font-family:'Chakra Petch',sans-serif;font-weight:600;font-size:88px;line-height:1.0;margin:0;">Hi, I'm Eric</h2>
     <p style="font-size:41px;line-height:1.45;color:#C9BEDA;margin:40px 0 0;max-width:1000px;">Software engineer &amp; lifelong tinkerer. I've been taking things apart and rebuilding them since I was a kid.</p>
     <ul style="list-style:none;padding:0;margin:44px 0 0;display:flex;flex-direction:column;gap:24px;max-width:1000px;">
-      <li style="display:flex;align-items:flex-start;gap:20px;font-size:37px;line-height:1.35;color:#ECE6F4;"><span style="flex:0 0 auto;margin-top:12px;width:11px;height:11px;border-radius:50%;background:#C96BFF;box-shadow:0 0 12px rgba(201,107,255,.7);"></span><span>Psy &amp; goa festivals <span style="color:#C96BFF;">since the turn of the millennium</span> — first with friends…</span></li>
+      <li style="display:flex;align-items:flex-start;gap:20px;font-size:37px;line-height:1.35;color:#ECE6F4;"><span style="flex:0 0 auto;margin-top:12px;width:11px;height:11px;border-radius:50%;background:#C96BFF;box-shadow:0 0 12px rgba(201,107,255,.7);"></span><span>Electronic music festivals <span style="color:#C96BFF;">since the turn of the millennium</span> — first with friends…</span></li>
       <li style="display:flex;align-items:flex-start;gap:20px;font-size:37px;line-height:1.35;color:#ECE6F4;"><span style="flex:0 0 auto;margin-top:12px;width:11px;height:11px;border-radius:50%;background:#FF8A3D;box-shadow:0 0 12px rgba(255,138,61,.7);"></span><span>…now with my <span style="color:#FF8A3D;">family</span> — a dad who camps, sometimes far from the rest of the camp.</span></li>
       <li style="display:flex;align-items:flex-start;gap:20px;font-size:37px;line-height:1.35;color:#ECE6F4;"><span style="flex:0 0 auto;margin-top:12px;width:11px;height:11px;border-radius:50%;background:#4FD6FF;box-shadow:0 0 12px rgba(79,214,255,.7);"></span><span>Back to tinkering with electronics — using AI as my teacher.</span></li>
       <li style="display:flex;align-items:flex-start;gap:20px;font-size:37px;line-height:1.35;color:#ECE6F4;"><span style="flex:0 0 auto;margin-top:12px;width:11px;height:11px;border-radius:50%;background:#9DE84B;box-shadow:0 0 12px rgba(157,232,75,.7);"></span><span>Helped build cloud infrastructure systems for <span style="color: rgb(157, 232, 75);">Mo:Dem</span>.</span></li>
